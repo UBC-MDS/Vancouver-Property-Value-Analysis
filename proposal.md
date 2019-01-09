@@ -5,6 +5,11 @@ With home prices in Vancouver at record highs over recent years, many are concer
 
 ### 2: Description of data
 
+> For this project, we will be using two datasets provided by the City of Vancouver in their Open Data Catalogue. The first of these datasets is the [Property Tax Report Data](https://data.vancouver.ca/datacatalogue/propertyTax.htm) for the year 2018 and we can calculate the total home price by adding the land value plus the improvement value. (Property value = Land value + Improvement value) We will visualize the home price in the first dataset by plotting a choropleth map displaying a summary statistic about the home value per neighbourhood. Moving to the second dataset, we will be using the [Census Local Area Profile for 2016](https://data.vancouver.ca/datacatalogue/censusLocalAreaProfiles2016.htm), which includes data for each neighbourhood about the age, income, number of people living per house and the proportions per immigrant status of the people living there.  
+
+
 ### 3: Usage Scenario and Tasks
+
+
 
 ### 4: Description of App and Initial Sketch
