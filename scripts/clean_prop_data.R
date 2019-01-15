@@ -21,6 +21,10 @@ clean_prop_data <- function(){
         mutate(TOTAL_VALUE = CURRENT_LAND_VALUE + CURRENT_IMPROVEMENT_VALUE) %>%
         left_join(neigh_code_map, by = c("NEIGHBOURHOOD_CODE"="CODE"))
     
+    return(neigh_tax)
+}
+
+neigh_prop_summary <- function(neigh_tax){
     # Get property summary stats for each neighbourhood
     neigh_prop <- neigh_tax %>% 
         group_by(NEIGHBOURHOOD_NAME) %>%
@@ -37,9 +41,5 @@ clean_prop_data <- function(){
     #neight_prop <- neigh_prop %>%
     #    filter(STREET_NAME == 'VACANT' | is.na(PROPERTY_POSTAL_CODE)) %>%
     #    summarise(count = n())
-    
     return(neigh_prop)
 }
-
-clean_prop_data()
-           
