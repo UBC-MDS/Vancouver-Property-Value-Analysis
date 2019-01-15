@@ -1,0 +1,1201 @@
+variable_category,variable,municipality,value
+age_group,0-4,Arbutus-Ridge,455
+age_group,5-9,Arbutus-Ridge,685
+age_group,10-14,Arbutus-Ridge,880
+age_group,15-19,Arbutus-Ridge,1230
+age_group,20-24,Arbutus-Ridge,1165
+age_group,25-29,Arbutus-Ridge,805
+age_group,30-34,Arbutus-Ridge,570
+age_group,35-39,Arbutus-Ridge,560
+age_group,40-44,Arbutus-Ridge,965
+age_group,45-49,Arbutus-Ridge,1350
+age_group,50-54,Arbutus-Ridge,1310
+age_group,55-59,Arbutus-Ridge,920
+age_group,60-64,Arbutus-Ridge,935
+age_group,65-69,Arbutus-Ridge,915
+age_group,70-74,Arbutus-Ridge,635
+age_group,75-79,Arbutus-Ridge,590
+age_group,80-84,Arbutus-Ridge,525
+age_group,85-89,Arbutus-Ridge,430
+age_group,90-94,Arbutus-Ridge,270
+age_group,95-99,Arbutus-Ridge,90
+age_group,0-4,Downtown,2080
+age_group,5-9,Downtown,1105
+age_group,10-14,Downtown,810
+age_group,15-19,Downtown,1180
+age_group,20-24,Downtown,4050
+age_group,25-29,Downtown,8810
+age_group,30-34,Downtown,9750
+age_group,35-39,Downtown,6620
+age_group,40-44,Downtown,4755
+age_group,45-49,Downtown,4610
+age_group,50-54,Downtown,4160
+age_group,55-59,Downtown,3970
+age_group,60-64,Downtown,3365
+age_group,65-69,Downtown,2640
+age_group,70-74,Downtown,1710
+age_group,75-79,Downtown,1095
+age_group,80-84,Downtown,700
+age_group,85-89,Downtown,390
+age_group,90-94,Downtown,170
+age_group,95-99,Downtown,45
+age_group,0-4,Dunbar-Southlands,675
+age_group,5-9,Dunbar-Southlands,1225
+age_group,10-14,Dunbar-Southlands,1650
+age_group,15-19,Dunbar-Southlands,1800
+age_group,20-24,Dunbar-Southlands,1740
+age_group,25-29,Dunbar-Southlands,1110
+age_group,30-34,Dunbar-Southlands,695
+age_group,35-39,Dunbar-Southlands,765
+age_group,40-44,Dunbar-Southlands,1325
+age_group,45-49,Dunbar-Southlands,2025
+age_group,50-54,Dunbar-Southlands,1895
+age_group,55-59,Dunbar-Southlands,1460
+age_group,60-64,Dunbar-Southlands,1400
+age_group,65-69,Dunbar-Southlands,1290
+age_group,70-74,Dunbar-Southlands,865
+age_group,75-79,Dunbar-Southlands,655
+age_group,80-84,Dunbar-Southlands,415
+age_group,85-89,Dunbar-Southlands,265
+age_group,90-94,Dunbar-Southlands,115
+age_group,95-99,Dunbar-Southlands,45
+age_group,0-4,Fairview,1240
+age_group,5-9,Fairview,760
+age_group,10-14,Fairview,580
+age_group,15-19,Fairview,655
+age_group,20-24,Fairview,1865
+age_group,25-29,Fairview,4025
+age_group,30-34,Fairview,4395
+age_group,35-39,Fairview,3175
+age_group,40-44,Fairview,2450
+age_group,45-49,Fairview,2340
+age_group,50-54,Fairview,2110
+age_group,55-59,Fairview,2145
+age_group,60-64,Fairview,1980
+age_group,65-69,Fairview,2005
+age_group,70-74,Fairview,1345
+age_group,75-79,Fairview,930
+age_group,80-84,Fairview,690
+age_group,85-89,Fairview,525
+age_group,90-94,Fairview,270
+age_group,95-99,Fairview,105
+age_group,0-4,Grandview-Woodland,1320
+age_group,5-9,Grandview-Woodland,1025
+age_group,10-14,Grandview-Woodland,865
+age_group,15-19,Grandview-Woodland,830
+age_group,20-24,Grandview-Woodland,1525
+age_group,25-29,Grandview-Woodland,3450
+age_group,30-34,Grandview-Woodland,3720
+age_group,35-39,Grandview-Woodland,2835
+age_group,40-44,Grandview-Woodland,2425
+age_group,45-49,Grandview-Woodland,2220
+age_group,50-54,Grandview-Woodland,2025
+age_group,55-59,Grandview-Woodland,1885
+age_group,60-64,Grandview-Woodland,1615
+age_group,65-69,Grandview-Woodland,1330
+age_group,70-74,Grandview-Woodland,750
+age_group,75-79,Grandview-Woodland,520
+age_group,80-84,Grandview-Woodland,425
+age_group,85-89,Grandview-Woodland,290
+age_group,90-94,Grandview-Woodland,100
+age_group,95-99,Grandview-Woodland,25
+age_group,0-4,Hastings-Sunrise,1510
+age_group,5-9,Hastings-Sunrise,1560
+age_group,10-14,Hastings-Sunrise,1525
+age_group,15-19,Hastings-Sunrise,1780
+age_group,20-24,Hastings-Sunrise,2360
+age_group,25-29,Hastings-Sunrise,2755
+age_group,30-34,Hastings-Sunrise,2515
+age_group,35-39,Hastings-Sunrise,2265
+age_group,40-44,Hastings-Sunrise,2300
+age_group,45-49,Hastings-Sunrise,2615
+age_group,50-54,Hastings-Sunrise,2800
+age_group,55-59,Hastings-Sunrise,2490
+age_group,60-64,Hastings-Sunrise,2055
+age_group,65-69,Hastings-Sunrise,1775
+age_group,70-74,Hastings-Sunrise,1065
+age_group,75-79,Hastings-Sunrise,1125
+age_group,80-84,Hastings-Sunrise,1085
+age_group,85-89,Hastings-Sunrise,655
+age_group,90-94,Hastings-Sunrise,265
+age_group,95-99,Hastings-Sunrise,60
+age_group,0-4,Kensington-Cedar Cottage,2515
+age_group,5-9,Kensington-Cedar Cottage,2390
+age_group,10-14,Kensington-Cedar Cottage,2160
+age_group,15-19,Kensington-Cedar Cottage,2630
+age_group,20-24,Kensington-Cedar Cottage,3470
+age_group,25-29,Kensington-Cedar Cottage,4325
+age_group,30-34,Kensington-Cedar Cottage,4205
+age_group,35-39,Kensington-Cedar Cottage,3805
+age_group,40-44,Kensington-Cedar Cottage,3700
+age_group,45-49,Kensington-Cedar Cottage,3640
+age_group,50-54,Kensington-Cedar Cottage,3570
+age_group,55-59,Kensington-Cedar Cottage,3190
+age_group,60-64,Kensington-Cedar Cottage,2840
+age_group,65-69,Kensington-Cedar Cottage,2190
+age_group,70-74,Kensington-Cedar Cottage,1385
+age_group,75-79,Kensington-Cedar Cottage,1280
+age_group,80-84,Kensington-Cedar Cottage,1035
+age_group,85-89,Kensington-Cedar Cottage,640
+age_group,90-94,Kensington-Cedar Cottage,260
+age_group,95-99,Kensington-Cedar Cottage,65
+age_group,0-4,Kerrisdale,430
+age_group,5-9,Kerrisdale,600
+age_group,10-14,Kerrisdale,845
+age_group,15-19,Kerrisdale,1050
+age_group,20-24,Kerrisdale,1150
+age_group,25-29,Kerrisdale,905
+age_group,30-34,Kerrisdale,560
+age_group,35-39,Kerrisdale,545
+age_group,40-44,Kerrisdale,770
+age_group,45-49,Kerrisdale,1245
+age_group,50-54,Kerrisdale,1245
+age_group,55-59,Kerrisdale,1045
+age_group,60-64,Kerrisdale,885
+age_group,65-69,Kerrisdale,850
+age_group,70-74,Kerrisdale,675
+age_group,75-79,Kerrisdale,495
+age_group,80-84,Kerrisdale,360
+age_group,85-89,Kerrisdale,195
+age_group,90-94,Kerrisdale,100
+age_group,95-99,Kerrisdale,20
+age_group,0-4,Killarney,1300
+age_group,5-9,Killarney,1400
+age_group,10-14,Killarney,1485
+age_group,15-19,Killarney,1760
+age_group,20-24,Killarney,1995
+age_group,25-29,Killarney,1755
+age_group,30-34,Killarney,1800
+age_group,35-39,Killarney,1810
+age_group,40-44,Killarney,2040
+age_group,45-49,Killarney,2165
+age_group,50-54,Killarney,2395
+age_group,55-59,Killarney,2290
+age_group,60-64,Killarney,1975
+age_group,65-69,Killarney,1745
+age_group,70-74,Killarney,1045
+age_group,75-79,Killarney,890
+age_group,80-84,Killarney,710
+age_group,85-89,Killarney,475
+age_group,90-94,Killarney,195
+age_group,95-99,Killarney,80
+age_group,0-4,Kitsilano,1720
+age_group,5-9,Kitsilano,1405
+age_group,10-14,Kitsilano,1195
+age_group,15-19,Kitsilano,1420
+age_group,20-24,Kitsilano,3250
+age_group,25-29,Kitsilano,5300
+age_group,30-34,Kitsilano,5080
+age_group,35-39,Kitsilano,3640
+age_group,40-44,Kitsilano,2990
+age_group,45-49,Kitsilano,3205
+age_group,50-54,Kitsilano,2895
+age_group,55-59,Kitsilano,2620
+age_group,60-64,Kitsilano,2405
+age_group,65-69,Kitsilano,2300
+age_group,70-74,Kitsilano,1475
+age_group,75-79,Kitsilano,855
+age_group,80-84,Kitsilano,575
+age_group,85-89,Kitsilano,435
+age_group,90-94,Kitsilano,210
+age_group,95-99,Kitsilano,65
+age_group,0-4,Marpole,905
+age_group,5-9,Marpole,855
+age_group,10-14,Marpole,885
+age_group,15-19,Marpole,1400
+age_group,20-24,Marpole,2060
+age_group,25-29,Marpole,2185
+age_group,30-34,Marpole,1815
+age_group,35-39,Marpole,1535
+age_group,40-44,Marpole,1535
+age_group,45-49,Marpole,1980
+age_group,50-54,Marpole,2135
+age_group,55-59,Marpole,1830
+age_group,60-64,Marpole,1570
+age_group,65-69,Marpole,1340
+age_group,70-74,Marpole,815
+age_group,75-79,Marpole,620
+age_group,80-84,Marpole,440
+age_group,85-89,Marpole,330
+age_group,90-94,Marpole,170
+age_group,95-99,Marpole,55
+age_group,0-4,Mount Pleasant,1565
+age_group,5-9,Mount Pleasant,910
+age_group,10-14,Mount Pleasant,605
+age_group,15-19,Mount Pleasant,630
+age_group,20-24,Mount Pleasant,1710
+age_group,25-29,Mount Pleasant,4895
+age_group,30-34,Mount Pleasant,5705
+age_group,35-39,Mount Pleasant,3935
+age_group,40-44,Mount Pleasant,2870
+age_group,45-49,Mount Pleasant,2165
+age_group,50-54,Mount Pleasant,2025
+age_group,55-59,Mount Pleasant,1740
+age_group,60-64,Mount Pleasant,1380
+age_group,65-69,Mount Pleasant,1195
+age_group,70-74,Mount Pleasant,610
+age_group,75-79,Mount Pleasant,415
+age_group,80-84,Mount Pleasant,290
+age_group,85-89,Mount Pleasant,180
+age_group,90-94,Mount Pleasant,95
+age_group,95-99,Mount Pleasant,25
+age_group,0-4,Oakridge,490
+age_group,5-9,Oakridge,480
+age_group,10-14,Oakridge,590
+age_group,15-19,Oakridge,835
+age_group,20-24,Oakridge,1040
+age_group,25-29,Oakridge,995
+age_group,30-34,Oakridge,735
+age_group,35-39,Oakridge,645
+age_group,40-44,Oakridge,685
+age_group,45-49,Oakridge,920
+age_group,50-54,Oakridge,1010
+age_group,55-59,Oakridge,825
+age_group,60-64,Oakridge,855
+age_group,65-69,Oakridge,855
+age_group,70-74,Oakridge,540
+age_group,75-79,Oakridge,500
+age_group,80-84,Oakridge,440
+age_group,85-89,Oakridge,310
+age_group,90-94,Oakridge,220
+age_group,95-99,Oakridge,45
+age_group,0-4,Renfrew-Collingwood,2065
+age_group,5-9,Renfrew-Collingwood,2115
+age_group,10-14,Renfrew-Collingwood,2130
+age_group,15-19,Renfrew-Collingwood,2815
+age_group,20-24,Renfrew-Collingwood,4340
+age_group,25-29,Renfrew-Collingwood,4820
+age_group,30-34,Renfrew-Collingwood,3985
+age_group,35-39,Renfrew-Collingwood,3490
+age_group,40-44,Renfrew-Collingwood,3350
+age_group,45-49,Renfrew-Collingwood,3570
+age_group,50-54,Renfrew-Collingwood,4115
+age_group,55-59,Renfrew-Collingwood,3685
+age_group,60-64,Renfrew-Collingwood,3145
+age_group,65-69,Renfrew-Collingwood,2545
+age_group,70-74,Renfrew-Collingwood,1570
+age_group,75-79,Renfrew-Collingwood,1495
+age_group,80-84,Renfrew-Collingwood,1215
+age_group,85-89,Renfrew-Collingwood,700
+age_group,90-94,Renfrew-Collingwood,300
+age_group,95-99,Renfrew-Collingwood,70
+age_group,0-4,Riley Park,1175
+age_group,5-9,Riley Park,1160
+age_group,10-14,Riley Park,1080
+age_group,15-19,Riley Park,1065
+age_group,20-24,Riley Park,1335
+age_group,25-29,Riley Park,1955
+age_group,30-34,Riley Park,2010
+age_group,35-39,Riley Park,1745
+age_group,40-44,Riley Park,1680
+age_group,45-49,Riley Park,1710
+age_group,50-54,Riley Park,1700
+age_group,55-59,Riley Park,1425
+age_group,60-64,Riley Park,1240
+age_group,65-69,Riley Park,1115
+age_group,70-74,Riley Park,610
+age_group,75-79,Riley Park,565
+age_group,80-84,Riley Park,485
+age_group,85-89,Riley Park,305
+age_group,90-94,Riley Park,135
+age_group,95-99,Riley Park,40
+age_group,0-4,Shaughnessy,270
+age_group,5-9,Shaughnessy,405
+age_group,10-14,Shaughnessy,500
+age_group,15-19,Shaughnessy,575
+age_group,20-24,Shaughnessy,635
+age_group,25-29,Shaughnessy,545
+age_group,30-34,Shaughnessy,445
+age_group,35-39,Shaughnessy,380
+age_group,40-44,Shaughnessy,385
+age_group,45-49,Shaughnessy,685
+age_group,50-54,Shaughnessy,665
+age_group,55-59,Shaughnessy,570
+age_group,60-64,Shaughnessy,565
+age_group,65-69,Shaughnessy,555
+age_group,70-74,Shaughnessy,370
+age_group,75-79,Shaughnessy,275
+age_group,80-84,Shaughnessy,240
+age_group,85-89,Shaughnessy,185
+age_group,90-94,Shaughnessy,130
+age_group,95-99,Shaughnessy,60
+age_group,0-4,South Cambie,360
+age_group,5-9,South Cambie,365
+age_group,10-14,South Cambie,375
+age_group,15-19,South Cambie,380
+age_group,20-24,South Cambie,475
+age_group,25-29,South Cambie,705
+age_group,30-34,South Cambie,670
+age_group,35-39,South Cambie,635
+age_group,40-44,South Cambie,530
+age_group,45-49,South Cambie,620
+age_group,50-54,South Cambie,530
+age_group,55-59,South Cambie,460
+age_group,60-64,South Cambie,425
+age_group,65-69,South Cambie,375
+age_group,70-74,South Cambie,255
+age_group,75-79,South Cambie,210
+age_group,80-84,South Cambie,235
+age_group,85-89,South Cambie,170
+age_group,90-94,South Cambie,145
+age_group,95-99,South Cambie,40
+age_group,0-4,Strathcona,360
+age_group,5-9,Strathcona,365
+age_group,10-14,Strathcona,340
+age_group,15-19,Strathcona,370
+age_group,20-24,Strathcona,575
+age_group,25-29,Strathcona,885
+age_group,30-34,Strathcona,960
+age_group,35-39,Strathcona,960
+age_group,40-44,Strathcona,830
+age_group,45-49,Strathcona,985
+age_group,50-54,Strathcona,1080
+age_group,55-59,Strathcona,1150
+age_group,60-64,Strathcona,945
+age_group,65-69,Strathcona,830
+age_group,70-74,Strathcona,485
+age_group,75-79,Strathcona,495
+age_group,80-84,Strathcona,445
+age_group,85-89,Strathcona,310
+age_group,90-94,Strathcona,140
+age_group,95-99,Strathcona,60
+age_group,0-4,Sunset,1695
+age_group,5-9,Sunset,1780
+age_group,10-14,Sunset,1985
+age_group,15-19,Sunset,2570
+age_group,20-24,Sunset,2975
+age_group,25-29,Sunset,2900
+age_group,30-34,Sunset,2450
+age_group,35-39,Sunset,2535
+age_group,40-44,Sunset,2540
+age_group,45-49,Sunset,2660
+age_group,50-54,Sunset,2610
+age_group,55-59,Sunset,2320
+age_group,60-64,Sunset,1925
+age_group,65-69,Sunset,1735
+age_group,70-74,Sunset,1195
+age_group,75-79,Sunset,1010
+age_group,80-84,Sunset,865
+age_group,85-89,Sunset,480
+age_group,90-94,Sunset,200
+age_group,95-99,Sunset,50
+age_group,0-4,Victoria-Fraserview,1175
+age_group,5-9,Victoria-Fraserview,1210
+age_group,10-14,Victoria-Fraserview,1410
+age_group,15-19,Victoria-Fraserview,1895
+age_group,20-24,Victoria-Fraserview,2220
+age_group,25-29,Victoria-Fraserview,2295
+age_group,30-34,Victoria-Fraserview,1985
+age_group,35-39,Victoria-Fraserview,1795
+age_group,40-44,Victoria-Fraserview,1805
+age_group,45-49,Victoria-Fraserview,2080
+age_group,50-54,Victoria-Fraserview,2450
+age_group,55-59,Victoria-Fraserview,2375
+age_group,60-64,Victoria-Fraserview,2205
+age_group,65-69,Victoria-Fraserview,1885
+age_group,70-74,Victoria-Fraserview,1110
+age_group,75-79,Victoria-Fraserview,1120
+age_group,80-84,Victoria-Fraserview,935
+age_group,85-89,Victoria-Fraserview,670
+age_group,90-94,Victoria-Fraserview,340
+age_group,95-99,Victoria-Fraserview,95
+age_group,0-4,West End,965
+age_group,5-9,West End,560
+age_group,10-14,West End,415
+age_group,15-19,West End,610
+age_group,20-24,West End,3100
+age_group,25-29,West End,7375
+age_group,30-34,West End,7140
+age_group,35-39,West End,4750
+age_group,40-44,West End,3280
+age_group,45-49,West End,3145
+age_group,50-54,West End,3230
+age_group,55-59,West End,2945
+age_group,60-64,West End,2680
+age_group,65-69,West End,2485
+age_group,70-74,West End,1815
+age_group,75-79,West End,1155
+age_group,80-84,West End,750
+age_group,85-89,West End,490
+age_group,90-94,West End,240
+age_group,95-99,West End,55
+age_group,0-4,West Point Grey,420
+age_group,5-9,West Point Grey,670
+age_group,10-14,West Point Grey,810
+age_group,15-19,West Point Grey,915
+age_group,20-24,West Point Grey,1215
+age_group,25-29,West Point Grey,780
+age_group,30-34,West Point Grey,610
+age_group,35-39,West Point Grey,575
+age_group,40-44,West Point Grey,755
+age_group,45-49,West Point Grey,1055
+age_group,50-54,West Point Grey,1030
+age_group,55-59,West Point Grey,865
+age_group,60-64,West Point Grey,860
+age_group,65-69,West Point Grey,900
+age_group,70-74,West Point Grey,605
+age_group,75-79,West Point Grey,415
+age_group,80-84,West Point Grey,275
+age_group,85-89,West Point Grey,195
+age_group,90-94,West Point Grey,80
+age_group,95-99,West Point Grey,25
+age_group,0-4,Vancouver CSD,24615
+age_group,5-9,Vancouver CSD,22905
+age_group,10-14,Vancouver CSD,23010
+age_group,15-19,Vancouver CSD,28265
+age_group,20-24,Vancouver CSD,44150
+age_group,25-29,Vancouver CSD,63475
+age_group,30-34,Vancouver CSD,61715
+age_group,35-39,Vancouver CSD,48915
+age_group,40-44,Vancouver CSD,43890
+age_group,45-49,Vancouver CSD,46890
+age_group,50-54,Vancouver CSD,46845
+age_group,55-59,Vancouver CSD,42100
+age_group,60-64,Vancouver CSD,37150
+age_group,65-69,Vancouver CSD,32760
+age_group,70-74,Vancouver CSD,20835
+age_group,75-79,Vancouver CSD,16630
+age_group,80-84,Vancouver CSD,13115
+age_group,85-89,Vancouver CSD,8615
+age_group,90-94,Vancouver CSD,4140
+age_group,95-99,Vancouver CSD,1215
+age_group,0-4,Vancouver CMA,116270
+age_group,5-9,Vancouver CMA,122730
+age_group,10-14,Vancouver CMA,123110
+age_group,15-19,Vancouver CMA,142285
+age_group,20-24,Vancouver CMA,167270
+age_group,25-29,Vancouver CMA,179940
+age_group,30-34,Vancouver CMA,182625
+age_group,35-39,Vancouver CMA,167950
+age_group,40-44,Vancouver CMA,168375
+age_group,45-49,Vancouver CMA,184285
+age_group,50-54,Vancouver CMA,191375
+age_group,55-59,Vancouver CMA,177095
+age_group,60-64,Vancouver CMA,152810
+age_group,65-69,Vancouver CMA,131035
+age_group,70-74,Vancouver CMA,89675
+age_group,75-79,Vancouver CMA,66505
+age_group,80-84,Vancouver CMA,48825
+age_group,85-89,Vancouver CMA,31475
+age_group,90-94,Vancouver CMA,14870
+age_group,95-99,Vancouver CMA,4190
+family_size,2 persons,Arbutus-Ridge,1840
+family_size,3 persons,Arbutus-Ridge,1085
+family_size,4 persons,Arbutus-Ridge,955
+family_size,5 or more persons,Arbutus-Ridge,245
+family_size,2 persons,Downtown,10715
+family_size,3 persons,Downtown,2540
+family_size,4 persons,Downtown,1100
+family_size,5 or more persons,Downtown,195
+family_size,2 persons,Dunbar-Southlands,2485
+family_size,3 persons,Dunbar-Southlands,1445
+family_size,4 persons,Dunbar-Southlands,1620
+family_size,5 or more persons,Dunbar-Southlands,495
+family_size,2 persons,Fairview,6125
+family_size,3 persons,Fairview,1440
+family_size,4 persons,Fairview,730
+family_size,5 or more persons,Fairview,95
+family_size,2 persons,Grandview-Woodland,4375
+family_size,3 persons,Grandview-Woodland,1465
+family_size,4 persons,Grandview-Woodland,955
+family_size,5 or more persons,Grandview-Woodland,225
+family_size,2 persons,Hastings-Sunrise,4315
+family_size,3 persons,Hastings-Sunrise,2350
+family_size,4 persons,Hastings-Sunrise,2045
+family_size,5 or more persons,Hastings-Sunrise,580
+family_size,2 persons,Kensington-Cedar Cottage,5885
+family_size,3 persons,Kensington-Cedar Cottage,3330
+family_size,4 persons,Kensington-Cedar Cottage,2980
+family_size,5 or more persons,Kensington-Cedar Cottage,855
+family_size,2 persons,Kerrisdale,1840
+family_size,3 persons,Kerrisdale,885
+family_size,4 persons,Kerrisdale,860
+family_size,5 or more persons,Kerrisdale,310
+family_size,2 persons,Killarney,3690
+family_size,3 persons,Killarney,2125
+family_size,4 persons,Killarney,1940
+family_size,5 or more persons,Killarney,550
+family_size,2 persons,Kitsilano,7005
+family_size,3 persons,Kitsilano,2025
+family_size,4 persons,Kitsilano,1430
+family_size,5 or more persons,Kitsilano,255
+family_size,2 persons,Marpole,3095
+family_size,3 persons,Marpole,1675
+family_size,4 persons,Marpole,1205
+family_size,5 or more persons,Marpole,295
+family_size,2 persons,Mount Pleasant,5630
+family_size,3 persons,Mount Pleasant,1470
+family_size,4 persons,Mount Pleasant,870
+family_size,5 or more persons,Mount Pleasant,150
+family_size,2 persons,Oakridge,1655
+family_size,3 persons,Oakridge,895
+family_size,4 persons,Oakridge,790
+family_size,5 or more persons,Oakridge,230
+family_size,2 persons,Renfrew-Collingwood,6295
+family_size,3 persons,Renfrew-Collingwood,3570
+family_size,4 persons,Renfrew-Collingwood,2980
+family_size,5 or more persons,Renfrew-Collingwood,890
+family_size,2 persons,Riley Park,2880
+family_size,3 persons,Riley Park,1380
+family_size,4 persons,Riley Park,1350
+family_size,5 or more persons,Riley Park,390
+family_size,2 persons,Shaughnessy,1040
+family_size,3 persons,Shaughnessy,500
+family_size,4 persons,Shaughnessy,505
+family_size,5 or more persons,Shaughnessy,230
+family_size,2 persons,South Cambie,985
+family_size,3 persons,South Cambie,470
+family_size,4 persons,South Cambie,435
+family_size,5 or more persons,South Cambie,115
+family_size,2 persons,Strathcona,1280
+family_size,3 persons,Strathcona,370
+family_size,4 persons,Strathcona,245
+family_size,5 or more persons,Strathcona,120
+family_size,2 persons,Sunset,3925
+family_size,3 persons,Sunset,2345
+family_size,4 persons,Sunset,2525
+family_size,5 or more persons,Sunset,935
+family_size,2 persons,Victoria-Fraserview,3615
+family_size,3 persons,Victoria-Fraserview,2215
+family_size,4 persons,Victoria-Fraserview,2000
+family_size,5 or more persons,Victoria-Fraserview,680
+family_size,2 persons,West End,8400
+family_size,3 persons,West End,1240
+family_size,4 persons,West End,485
+family_size,5 or more persons,West End,65
+family_size,2 persons,West Point Grey,1750
+family_size,3 persons,West Point Grey,780
+family_size,4 persons,West Point Grey,780
+family_size,5 or more persons,West Point Grey,250
+family_size,2 persons,Vancouver CSD,88590
+family_size,3 persons,Vancouver CSD,35480
+family_size,4 persons,Vancouver CSD,28685
+family_size,5 or more persons,Vancouver CSD,8105
+family_size,2 persons,Vancouver CMA,327260
+family_size,3 persons,Vancouver CMA,158785
+family_size,4 persons,Vancouver CMA,145805
+family_size,5 or more persons,Vancouver CMA,47515
+household_size,1 person,Arbutus-Ridge,1845
+household_size,2 persons,Arbutus-Ridge,1750
+household_size,3 persons,Arbutus-Ridge,1050
+household_size,4 persons,Arbutus-Ridge,970
+household_size,5 or more persons,Arbutus-Ridge,450
+household_size,1 person,Downtown,18055
+household_size,2 persons,Downtown,12340
+household_size,3 persons,Downtown,3040
+household_size,4 persons,Downtown,1300
+household_size,5 or more persons,Downtown,315
+household_size,1 person,Dunbar-Southlands,1375
+household_size,2 persons,Dunbar-Southlands,2285
+household_size,3 persons,Dunbar-Southlands,1475
+household_size,4 persons,Dunbar-Southlands,1620
+household_size,5 or more persons,Dunbar-Southlands,810
+household_size,1 person,Fairview,9960
+household_size,2 persons,Fairview,7025
+household_size,3 persons,Fairview,1645
+household_size,4 persons,Fairview,765
+household_size,5 or more persons,Fairview,135
+household_size,1 person,Grandview-Woodland,6690
+household_size,2 persons,Grandview-Woodland,4940
+household_size,3 persons,Grandview-Woodland,1760
+household_size,4 persons,Grandview-Woodland,1105
+household_size,5 or more persons,Grandview-Woodland,490
+household_size,1 person,Hastings-Sunrise,3315
+household_size,2 persons,Hastings-Sunrise,3710
+household_size,3 persons,Hastings-Sunrise,2245
+household_size,4 persons,Hastings-Sunrise,2020
+household_size,5 or more persons,Hastings-Sunrise,1495
+household_size,1 person,Kensington-Cedar Cottage,4240
+household_size,2 persons,Kensington-Cedar Cottage,5185
+household_size,3 persons,Kensington-Cedar Cottage,3365
+household_size,4 persons,Kensington-Cedar Cottage,2950
+household_size,5 or more persons,Kensington-Cedar Cottage,2135
+household_size,1 person,Kerrisdale,1565
+household_size,2 persons,Kerrisdale,1725
+household_size,3 persons,Kerrisdale,865
+household_size,4 persons,Kerrisdale,835
+household_size,5 or more persons,Kerrisdale,540
+household_size,1 person,Killarney,2465
+household_size,2 persons,Killarney,3185
+household_size,3 persons,Killarney,2000
+household_size,4 persons,Killarney,1855
+household_size,5 or more persons,Killarney,1160
+household_size,1 person,Kitsilano,10270
+household_size,2 persons,Kitsilano,8105
+household_size,3 persons,Kitsilano,2470
+household_size,4 persons,Kitsilano,1555
+household_size,5 or more persons,Kitsilano,470
+household_size,1 person,Marpole,4255
+household_size,2 persons,Marpole,3060
+household_size,3 persons,Marpole,1660
+household_size,4 persons,Marpole,1240
+household_size,5 or more persons,Marpole,655
+household_size,1 person,Mount Pleasant,8525
+household_size,2 persons,Mount Pleasant,6430
+household_size,3 persons,Mount Pleasant,1755
+household_size,4 persons,Mount Pleasant,980
+household_size,5 or more persons,Mount Pleasant,300
+household_size,1 person,Oakridge,1365
+household_size,2 persons,Oakridge,1485
+household_size,3 persons,Oakridge,840
+household_size,4 persons,Oakridge,760
+household_size,5 or more persons,Oakridge,520
+household_size,1 person,Renfrew-Collingwood,4695
+household_size,2 persons,Renfrew-Collingwood,5415
+household_size,3 persons,Renfrew-Collingwood,3515
+household_size,4 persons,Renfrew-Collingwood,2935
+household_size,5 or more persons,Renfrew-Collingwood,2315
+household_size,1 person,Riley Park,2355
+household_size,2 persons,Riley Park,2840
+household_size,3 persons,Riley Park,1455
+household_size,4 persons,Riley Park,1395
+household_size,5 or more persons,Riley Park,790
+household_size,1 person,Shaughnessy,605
+household_size,2 persons,Shaughnessy,950
+household_size,3 persons,Shaughnessy,495
+household_size,4 persons,Shaughnessy,500
+household_size,5 or more persons,Shaughnessy,385
+household_size,1 person,South Cambie,945
+household_size,2 persons,South Cambie,1045
+household_size,3 persons,South Cambie,470
+household_size,4 persons,South Cambie,440
+household_size,5 or more persons,South Cambie,235
+household_size,1 person,Strathcona,3580
+household_size,2 persons,Strathcona,1380
+household_size,3 persons,Strathcona,420
+household_size,4 persons,Strathcona,290
+household_size,5 or more persons,Strathcona,190
+household_size,1 person,Sunset,2330
+household_size,2 persons,Sunset,2890
+household_size,3 persons,Sunset,2060
+household_size,4 persons,Sunset,2165
+household_size,5 or more persons,Sunset,2260
+household_size,1 person,Victoria-Fraserview,2105
+household_size,2 persons,Victoria-Fraserview,2645
+household_size,3 persons,Victoria-Fraserview,1900
+household_size,4 persons,Victoria-Fraserview,1810
+household_size,5 or more persons,Victoria-Fraserview,1695
+household_size,1 person,West End,18070
+household_size,2 persons,West End,10455
+household_size,3 persons,West End,1670
+household_size,4 persons,West End,565
+household_size,5 or more persons,West End,110
+household_size,1 person,West Point Grey,1540
+household_size,2 persons,West Point Grey,1805
+household_size,3 persons,West Point Grey,815
+household_size,4 persons,West Point Grey,815
+household_size,5 or more persons,West Point Grey,410
+household_size,1 person,Vancouver CSD,110020
+household_size,2 persons,Vancouver CSD,90450
+household_size,3 persons,Vancouver CSD,36885
+household_size,4 persons,Vancouver CSD,28775
+household_size,5 or more persons,Vancouver CSD,17780
+household_size,1 person,Vancouver CMA,275455
+household_size,2 persons,Vancouver CMA,300170
+household_size,3 persons,Vancouver CMA,153090
+household_size,4 persons,Vancouver CMA,139180
+household_size,5 or more persons,Vancouver CMA,93005
+house_type,Single-detached house,Arbutus-Ridge,2310
+house_type,Apartment in a building that has five or more storeys,Arbutus-Ridge,1440
+house_type,Other attached dwelling,Arbutus-Ridge,2320
+house_type,Semi-detached house,Arbutus-Ridge,45
+house_type,Row house,Arbutus-Ridge,270
+house_type,Apartment or flat in a duplex,Arbutus-Ridge,705
+house_type,Apartment in a building that has fewer than five storeys,Arbutus-Ridge,1300
+house_type,Other single-attached house,Arbutus-Ridge,5
+house_type,Movable dwelling,Arbutus-Ridge,0
+house_type,Single-detached house,Downtown,15
+house_type,Apartment in a building that has five or more storeys,Downtown,32910
+house_type,Other attached dwelling,Downtown,2120
+house_type,Semi-detached house,Downtown,5
+house_type,Row house,Downtown,890
+house_type,Apartment or flat in a duplex,Downtown,10
+house_type,Apartment in a building that has fewer than five storeys,Downtown,1210
+house_type,Other single-attached house,Downtown,5
+house_type,Movable dwelling,Downtown,0
+house_type,Single-detached house,Dunbar-Southlands,4715
+house_type,Apartment in a building that has five or more storeys,Dunbar-Southlands,0
+house_type,Other attached dwelling,Dunbar-Southlands,2850
+house_type,Semi-detached house,Dunbar-Southlands,10
+house_type,Row house,Dunbar-Southlands,90
+house_type,Apartment or flat in a duplex,Dunbar-Southlands,2045
+house_type,Apartment in a building that has fewer than five storeys,Dunbar-Southlands,700
+house_type,Other single-attached house,Dunbar-Southlands,5
+house_type,Movable dwelling,Dunbar-Southlands,0
+house_type,Single-detached house,Fairview,70
+house_type,Apartment in a building that has five or more storeys,Fairview,6520
+house_type,Other attached dwelling,Fairview,12945
+house_type,Semi-detached house,Fairview,115
+house_type,Row house,Fairview,890
+house_type,Apartment or flat in a duplex,Fairview,50
+house_type,Apartment in a building that has fewer than five storeys,Fairview,11855
+house_type,Other single-attached house,Fairview,25
+house_type,Movable dwelling,Fairview,10
+house_type,Single-detached house,Grandview-Woodland,1275
+house_type,Apartment in a building that has five or more storeys,Grandview-Woodland,690
+house_type,Other attached dwelling,Grandview-Woodland,13005
+house_type,Semi-detached house,Grandview-Woodland,535
+house_type,Row house,Grandview-Woodland,310
+house_type,Apartment or flat in a duplex,Grandview-Woodland,2370
+house_type,Apartment in a building that has fewer than five storeys,Grandview-Woodland,9745
+house_type,Other single-attached house,Grandview-Woodland,45
+house_type,Movable dwelling,Grandview-Woodland,0
+house_type,Single-detached house,Hastings-Sunrise,4020
+house_type,Apartment in a building that has five or more storeys,Hastings-Sunrise,190
+house_type,Other attached dwelling,Hastings-Sunrise,8565
+house_type,Semi-detached house,Hastings-Sunrise,75
+house_type,Row house,Hastings-Sunrise,420
+house_type,Apartment or flat in a duplex,Hastings-Sunrise,5620
+house_type,Apartment in a building that has fewer than five storeys,Hastings-Sunrise,2430
+house_type,Other single-attached house,Hastings-Sunrise,20
+house_type,Movable dwelling,Hastings-Sunrise,0
+house_type,Single-detached house,Kensington-Cedar Cottage,3115
+house_type,Apartment in a building that has five or more storeys,Kensington-Cedar Cottage,625
+house_type,Other attached dwelling,Kensington-Cedar Cottage,14135
+house_type,Semi-detached house,Kensington-Cedar Cottage,495
+house_type,Row house,Kensington-Cedar Cottage,460
+house_type,Apartment or flat in a duplex,Kensington-Cedar Cottage,8325
+house_type,Apartment in a building that has fewer than five storeys,Kensington-Cedar Cottage,4740
+house_type,Other single-attached house,Kensington-Cedar Cottage,115
+house_type,Movable dwelling,Kensington-Cedar Cottage,0
+house_type,Single-detached house,Kerrisdale,2800
+house_type,Apartment in a building that has five or more storeys,Kerrisdale,610
+house_type,Other attached dwelling,Kerrisdale,2120
+house_type,Semi-detached house,Kerrisdale,15
+house_type,Row house,Kerrisdale,45
+house_type,Apartment or flat in a duplex,Kerrisdale,555
+house_type,Apartment in a building that has fewer than five storeys,Kerrisdale,1490
+house_type,Other single-attached house,Kerrisdale,10
+house_type,Movable dwelling,Kerrisdale,0
+house_type,Single-detached house,Killarney,1750
+house_type,Apartment in a building that has five or more storeys,Killarney,780
+house_type,Other attached dwelling,Killarney,8125
+house_type,Semi-detached house,Killarney,50
+house_type,Row house,Killarney,3240
+house_type,Apartment or flat in a duplex,Killarney,2580
+house_type,Apartment in a building that has fewer than five storeys,Killarney,2250
+house_type,Other single-attached house,Killarney,5
+house_type,Movable dwelling,Killarney,0
+house_type,Single-detached house,Kitsilano,1380
+house_type,Apartment in a building that has five or more storeys,Kitsilano,1585
+house_type,Other attached dwelling,Kitsilano,19900
+house_type,Semi-detached house,Kitsilano,1270
+house_type,Row house,Kitsilano,510
+house_type,Apartment or flat in a duplex,Kitsilano,2785
+house_type,Apartment in a building that has fewer than five storeys,Kitsilano,15290
+house_type,Other single-attached house,Kitsilano,45
+house_type,Movable dwelling,Kitsilano,0
+house_type,Single-detached house,Marpole,2180
+house_type,Apartment in a building that has five or more storeys,Marpole,990
+house_type,Other attached dwelling,Marpole,7700
+house_type,Semi-detached house,Marpole,580
+house_type,Row house,Marpole,370
+house_type,Apartment or flat in a duplex,Marpole,1270
+house_type,Apartment in a building that has fewer than five storeys,Marpole,5445
+house_type,Other single-attached house,Marpole,40
+house_type,Movable dwelling,Marpole,5
+house_type,Single-detached house,Mount Pleasant,390
+house_type,Apartment in a building that has five or more storeys,Mount Pleasant,5505
+house_type,Other attached dwelling,Mount Pleasant,12095
+house_type,Semi-detached house,Mount Pleasant,510
+house_type,Row house,Mount Pleasant,375
+house_type,Apartment or flat in a duplex,Mount Pleasant,1095
+house_type,Apartment in a building that has fewer than five storeys,Mount Pleasant,10095
+house_type,Other single-attached house,Mount Pleasant,20
+house_type,Movable dwelling,Mount Pleasant,0
+house_type,Single-detached house,Oakridge,1905
+house_type,Apartment in a building that has five or more storeys,Oakridge,955
+house_type,Other attached dwelling,Oakridge,2110
+house_type,Semi-detached house,Oakridge,30
+house_type,Row house,Oakridge,350
+house_type,Apartment or flat in a duplex,Oakridge,585
+house_type,Apartment in a building that has fewer than five storeys,Oakridge,1145
+house_type,Other single-attached house,Oakridge,0
+house_type,Movable dwelling,Oakridge,0
+house_type,Single-detached house,Renfrew-Collingwood,3560
+house_type,Apartment in a building that has five or more storeys,Renfrew-Collingwood,3230
+house_type,Other attached dwelling,Renfrew-Collingwood,12080
+house_type,Semi-detached house,Renfrew-Collingwood,85
+house_type,Row house,Renfrew-Collingwood,275
+house_type,Apartment or flat in a duplex,Renfrew-Collingwood,7615
+house_type,Apartment in a building that has fewer than five storeys,Renfrew-Collingwood,4010
+house_type,Other single-attached house,Renfrew-Collingwood,95
+house_type,Movable dwelling,Renfrew-Collingwood,0
+house_type,Single-detached house,Riley Park,2220
+house_type,Apartment in a building that has five or more storeys,Riley Park,230
+house_type,Other attached dwelling,Riley Park,6385
+house_type,Semi-detached house,Riley Park,165
+house_type,Row house,Riley Park,190
+house_type,Apartment or flat in a duplex,Riley Park,3435
+house_type,Apartment in a building that has fewer than five storeys,Riley Park,2580
+house_type,Other single-attached house,Riley Park,15
+house_type,Movable dwelling,Riley Park,0
+house_type,Single-detached house,Shaughnessy,1895
+house_type,Apartment in a building that has five or more storeys,Shaughnessy,70
+house_type,Other attached dwelling,Shaughnessy,970
+house_type,Semi-detached house,Shaughnessy,10
+house_type,Row house,Shaughnessy,110
+house_type,Apartment or flat in a duplex,Shaughnessy,315
+house_type,Apartment in a building that has fewer than five storeys,Shaughnessy,540
+house_type,Other single-attached house,Shaughnessy,0
+house_type,Movable dwelling,Shaughnessy,0
+house_type,Single-detached house,South Cambie,875
+house_type,Apartment in a building that has five or more storeys,South Cambie,220
+house_type,Other attached dwelling,South Cambie,2040
+house_type,Semi-detached house,South Cambie,65
+house_type,Row house,South Cambie,105
+house_type,Apartment or flat in a duplex,South Cambie,715
+house_type,Apartment in a building that has fewer than five storeys,South Cambie,1150
+house_type,Other single-attached house,South Cambie,5
+house_type,Movable dwelling,South Cambie,0
+house_type,Single-detached house,Strathcona,320
+house_type,Apartment in a building that has five or more storeys,Strathcona,2240
+house_type,Other attached dwelling,Strathcona,3300
+house_type,Semi-detached house,Strathcona,115
+house_type,Row house,Strathcona,285
+house_type,Apartment or flat in a duplex,Strathcona,370
+house_type,Apartment in a building that has fewer than five storeys,Strathcona,2510
+house_type,Other single-attached house,Strathcona,10
+house_type,Movable dwelling,Strathcona,0
+house_type,Single-detached house,Sunset,1935
+house_type,Apartment in a building that has five or more storeys,Sunset,0
+house_type,Other attached dwelling,Sunset,9770
+house_type,Semi-detached house,Sunset,185
+house_type,Row house,Sunset,145
+house_type,Apartment or flat in a duplex,Sunset,6630
+house_type,Apartment in a building that has fewer than five storeys,Sunset,2690
+house_type,Other single-attached house,Sunset,120
+house_type,Movable dwelling,Sunset,0
+house_type,Single-detached house,Victoria-Fraserview,2645
+house_type,Apartment in a building that has five or more storeys,Victoria-Fraserview,0
+house_type,Other attached dwelling,Victoria-Fraserview,7500
+house_type,Semi-detached house,Victoria-Fraserview,55
+house_type,Row house,Victoria-Fraserview,390
+house_type,Apartment or flat in a duplex,Victoria-Fraserview,4455
+house_type,Apartment in a building that has fewer than five storeys,Victoria-Fraserview,2580
+house_type,Other single-attached house,Victoria-Fraserview,20
+house_type,Movable dwelling,Victoria-Fraserview,5
+house_type,Single-detached house,West End,30
+house_type,Apartment in a building that has five or more storeys,West End,24035
+house_type,Other attached dwelling,West End,6805
+house_type,Semi-detached house,West End,10
+house_type,Row house,West End,135
+house_type,Apartment or flat in a duplex,West End,45
+house_type,Apartment in a building that has fewer than five storeys,West End,6595
+house_type,Other single-attached house,West End,20
+house_type,Movable dwelling,West End,0
+house_type,Single-detached house,West Point Grey,2175
+house_type,Apartment in a building that has five or more storeys,West Point Grey,430
+house_type,Other attached dwelling,West Point Grey,2780
+house_type,Semi-detached house,West Point Grey,55
+house_type,Row house,West Point Grey,65
+house_type,Apartment or flat in a duplex,West Point Grey,1395
+house_type,Apartment in a building that has fewer than five storeys,West Point Grey,1260
+house_type,Other single-attached house,West Point Grey,0
+house_type,Movable dwelling,West Point Grey,0
+house_type,Single-detached house,Vancouver CSD,41325
+house_type,Apartment in a building that has five or more storeys,Vancouver CSD,83250
+house_type,Other attached dwelling,Vancouver CSD,159310
+house_type,Semi-detached house,Vancouver CSD,4480
+house_type,Row house,Vancouver CSD,9845
+house_type,Apartment or flat in a duplex,Vancouver CSD,52970
+house_type,Apartment in a building that has fewer than five storeys,Vancouver CSD,91380
+house_type,Other single-attached house,Vancouver CSD,635
+house_type,Movable dwelling,Vancouver CSD,25
+house_type,Single-detached house,Vancouver CMA,282355
+house_type,Apartment in a building that has five or more storeys,Vancouver CMA,160060
+house_type,Other attached dwelling,Vancouver CMA,513900
+house_type,Semi-detached house,Vancouver CMA,20530
+house_type,Row house,Vancouver CMA,93415
+house_type,Apartment or flat in a duplex,Vancouver CMA,156440
+house_type,Apartment in a building that has fewer than five storeys,Vancouver CMA,242200
+house_type,Other single-attached house,Vancouver CMA,1305
+house_type,Movable dwelling,Vancouver CMA,4580
+avg_income,Average total income in 2015 among recipients ($),Arbutus-Ridge,62675
+avg_income,Average total income in 2015 among recipients ($),Downtown,63251
+avg_income,Average total income in 2015 among recipients ($),Dunbar-Southlands,78117
+avg_income,Average total income in 2015 among recipients ($),Fairview,61627
+avg_income,Average total income in 2015 among recipients ($),Grandview-Woodland,42896
+avg_income,Average total income in 2015 among recipients ($),Hastings-Sunrise,38258
+avg_income,Average total income in 2015 among recipients ($),Kensington-Cedar Cottage,38411
+avg_income,Average total income in 2015 among recipients ($),Kerrisdale,77248
+avg_income,Average total income in 2015 among recipients ($),Killarney,39013
+avg_income,Average total income in 2015 among recipients ($),Kitsilano,63092
+avg_income,Average total income in 2015 among recipients ($),Marpole,39020
+avg_income,Average total income in 2015 among recipients ($),Mount Pleasant,54260
+avg_income,Average total income in 2015 among recipients ($),Oakridge,46515
+avg_income,Average total income in 2015 among recipients ($),Renfrew-Collingwood,33360
+avg_income,Average total income in 2015 among recipients ($),Riley Park,53060
+avg_income,Average total income in 2015 among recipients ($),Shaughnessy,118668
+avg_income,Average total income in 2015 among recipients ($),South Cambie,65459
+avg_income,Average total income in 2015 among recipients ($),Strathcona,31534
+avg_income,Average total income in 2015 among recipients ($),Sunset,34212
+avg_income,Average total income in 2015 among recipients ($),Victoria-Fraserview,34298
+avg_income,Average total income in 2015 among recipients ($),West End,47253
+avg_income,Average total income in 2015 among recipients ($),West Point Grey,82042
+avg_income,Average total income in 2015 among recipients ($),Vancouver CSD,50317
+avg_income,Average total income in 2015 among recipients ($),Vancouver CMA,46821
+median_income,Median total income in 2015 among recipients ($),Arbutus-Ridge,30929
+median_income,Median total income in 2015 among recipients ($),Downtown,41858
+median_income,Median total income in 2015 among recipients ($),Dunbar-Southlands,40463
+median_income,Median total income in 2015 among recipients ($),Fairview,46940
+median_income,Median total income in 2015 among recipients ($),Grandview-Woodland,32438
+median_income,Median total income in 2015 among recipients ($),Hastings-Sunrise,27255
+median_income,Median total income in 2015 among recipients ($),Kensington-Cedar Cottage,28356
+median_income,Median total income in 2015 among recipients ($),Kerrisdale,35064
+median_income,Median total income in 2015 among recipients ($),Killarney,29259
+median_income,Median total income in 2015 among recipients ($),Kitsilano,44084
+median_income,Median total income in 2015 among recipients ($),Marpole,26787
+median_income,Median total income in 2015 among recipients ($),Mount Pleasant,42362
+median_income,Median total income in 2015 among recipients ($),Oakridge,26695
+median_income,Median total income in 2015 among recipients ($),Renfrew-Collingwood,25476
+median_income,Median total income in 2015 among recipients ($),Riley Park,37327
+median_income,Median total income in 2015 among recipients ($),Shaughnessy,44392
+median_income,Median total income in 2015 among recipients ($),South Cambie,42094
+median_income,Median total income in 2015 among recipients ($),Strathcona,17631
+median_income,Median total income in 2015 among recipients ($),Sunset,25498
+median_income,Median total income in 2015 among recipients ($),Victoria-Fraserview,24758
+median_income,Median total income in 2015 among recipients ($),West End,36425
+median_income,Median total income in 2015 among recipients ($),West Point Grey,40304
+median_income,Median total income in 2015 among recipients ($),Vancouver CSD,32896
+median_income,Median total income in 2015 among recipients ($),Vancouver CMA,32575
+num_people,Non-immigrants,Arbutus-Ridge,6650
+num_people,Immigrants,Arbutus-Ridge,7730
+num_people,Before 1981,Arbutus-Ridge,1605
+num_people,1981 to 1990,Arbutus-Ridge,740
+num_people,1991 to 2000,Arbutus-Ridge,1550
+num_people,2001 to 2010,Arbutus-Ridge,2575
+num_people,2001 to 2005,Arbutus-Ridge,1170
+num_people,2006 to 2010,Arbutus-Ridge,1405
+num_people,2011 to 2016,Arbutus-Ridge,1260
+num_people,Non-permanent residents,Arbutus-Ridge,690
+num_people,Non-immigrants,Downtown,29690
+num_people,Immigrants,Downtown,23590
+num_people,Before 1981,Downtown,3780
+num_people,1981 to 1990,Downtown,2425
+num_people,1991 to 2000,Downtown,6355
+num_people,2001 to 2010,Downtown,6590
+num_people,2001 to 2005,Downtown,2995
+num_people,2006 to 2010,Downtown,3600
+num_people,2011 to 2016,Downtown,4440
+num_people,Non-permanent residents,Downtown,5575
+num_people,Non-immigrants,Dunbar-Southlands,12605
+num_people,Immigrants,Dunbar-Southlands,7960
+num_people,Before 1981,Dunbar-Southlands,2120
+num_people,1981 to 1990,Dunbar-Southlands,730
+num_people,1991 to 2000,Dunbar-Southlands,1385
+num_people,2001 to 2010,Dunbar-Southlands,2405
+num_people,2001 to 2005,Dunbar-Southlands,880
+num_people,2006 to 2010,Dunbar-Southlands,1520
+num_people,2011 to 2016,Dunbar-Southlands,1325
+num_people,Non-permanent residents,Dunbar-Southlands,720
+num_people,Non-immigrants,Fairview,21895
+num_people,Immigrants,Fairview,9560
+num_people,Before 1981,Fairview,2915
+num_people,1981 to 1990,Fairview,1170
+num_people,1991 to 2000,Fairview,2095
+num_people,2001 to 2010,Fairview,1930
+num_people,2001 to 2005,Fairview,860
+num_people,2006 to 2010,Fairview,1065
+num_people,2011 to 2016,Fairview,1455
+num_people,Non-permanent residents,Fairview,1270
+num_people,Non-immigrants,Grandview-Woodland,20490
+num_people,Immigrants,Grandview-Woodland,7715
+num_people,Before 1981,Grandview-Woodland,2360
+num_people,1981 to 1990,Grandview-Woodland,1485
+num_people,1991 to 2000,Grandview-Woodland,1540
+num_people,2001 to 2010,Grandview-Woodland,1415
+num_people,2001 to 2005,Grandview-Woodland,660
+num_people,2006 to 2010,Grandview-Woodland,755
+num_people,2011 to 2016,Grandview-Woodland,920
+num_people,Non-permanent residents,Grandview-Woodland,795
+num_people,Non-immigrants,Hastings-Sunrise,17845
+num_people,Immigrants,Hastings-Sunrise,15305
+num_people,Before 1981,Hastings-Sunrise,5175
+num_people,1981 to 1990,Hastings-Sunrise,2740
+num_people,1991 to 2000,Hastings-Sunrise,3810
+num_people,2001 to 2010,Hastings-Sunrise,2280
+num_people,2001 to 2005,Hastings-Sunrise,1145
+num_people,2006 to 2010,Hastings-Sunrise,1135
+num_people,2011 to 2016,Hastings-Sunrise,1300
+num_people,Non-permanent residents,Hastings-Sunrise,965
+num_people,Non-immigrants,Kensington-Cedar Cottage,24760
+num_people,Immigrants,Kensington-Cedar Cottage,22610
+num_people,Before 1981,Kensington-Cedar Cottage,5645
+num_people,1981 to 1990,Kensington-Cedar Cottage,4220
+num_people,1991 to 2000,Kensington-Cedar Cottage,5585
+num_people,2001 to 2010,Kensington-Cedar Cottage,4490
+num_people,2001 to 2005,Kensington-Cedar Cottage,2070
+num_people,2006 to 2010,Kensington-Cedar Cottage,2420
+num_people,2011 to 2016,Kensington-Cedar Cottage,2665
+num_people,Non-permanent residents,Kensington-Cedar Cottage,1495
+num_people,Non-immigrants,Kerrisdale,6560
+num_people,Immigrants,Kerrisdale,6640
+num_people,Before 1981,Kerrisdale,1465
+num_people,1981 to 1990,Kerrisdale,840
+num_people,1991 to 2000,Kerrisdale,1390
+num_people,2001 to 2010,Kerrisdale,2200
+num_people,2001 to 2005,Kerrisdale,665
+num_people,2006 to 2010,Kerrisdale,1540
+num_people,2011 to 2016,Kerrisdale,740
+num_people,Non-permanent residents,Kerrisdale,705
+num_people,Non-immigrants,Killarney,13295
+num_people,Immigrants,Killarney,15120
+num_people,Before 1981,Killarney,3415
+num_people,1981 to 1990,Killarney,2410
+num_people,1991 to 2000,Killarney,4525
+num_people,2001 to 2010,Killarney,3100
+num_people,2001 to 2005,Killarney,1580
+num_people,2006 to 2010,Killarney,1515
+num_people,2011 to 2016,Killarney,1665
+num_people,Non-permanent residents,Killarney,525
+num_people,Non-immigrants,Kitsilano,28840
+num_people,Immigrants,Kitsilano,11580
+num_people,Before 1981,Kitsilano,3740
+num_people,1981 to 1990,Kitsilano,1120
+num_people,1991 to 2000,Kitsilano,1930
+num_people,2001 to 2010,Kitsilano,2530
+num_people,2001 to 2005,Kitsilano,1110
+num_people,2006 to 2010,Kitsilano,1425
+num_people,2011 to 2016,Kitsilano,2255
+num_people,Non-permanent residents,Kitsilano,2335
+num_people,Non-immigrants,Marpole,9860
+num_people,Immigrants,Marpole,13140
+num_people,Before 1981,Marpole,2285
+num_people,1981 to 1990,Marpole,1735
+num_people,1991 to 2000,Marpole,3720
+num_people,2001 to 2010,Marpole,3645
+num_people,2001 to 2005,Marpole,1805
+num_people,2006 to 2010,Marpole,1840
+num_people,2011 to 2016,Marpole,1745
+num_people,Non-permanent residents,Marpole,1140
+num_people,Non-immigrants,Mount Pleasant,22125
+num_people,Immigrants,Mount Pleasant,9010
+num_people,Before 1981,Mount Pleasant,1830
+num_people,1981 to 1990,Mount Pleasant,1440
+num_people,1991 to 2000,Mount Pleasant,2330
+num_people,2001 to 2010,Mount Pleasant,1975
+num_people,2001 to 2005,Mount Pleasant,895
+num_people,2006 to 2010,Mount Pleasant,1080
+num_people,2011 to 2016,Mount Pleasant,1430
+num_people,Non-permanent residents,Mount Pleasant,1100
+num_people,Non-immigrants,Oakridge,4715
+num_people,Immigrants,Oakridge,7720
+num_people,Before 1981,Oakridge,1820
+num_people,1981 to 1990,Oakridge,1015
+num_people,1991 to 2000,Oakridge,1990
+num_people,2001 to 2010,Oakridge,2025
+num_people,2001 to 2005,Oakridge,965
+num_people,2006 to 2010,Oakridge,1065
+num_people,2011 to 2016,Oakridge,870
+num_people,Non-permanent residents,Oakridge,595
+num_people,Non-immigrants,Renfrew-Collingwood,19985
+num_people,Immigrants,Renfrew-Collingwood,28710
+num_people,Before 1981,Renfrew-Collingwood,6420
+num_people,1981 to 1990,Renfrew-Collingwood,5165
+num_people,1991 to 2000,Renfrew-Collingwood,7345
+num_people,2001 to 2010,Renfrew-Collingwood,6300
+num_people,2001 to 2005,Renfrew-Collingwood,2920
+num_people,2006 to 2010,Renfrew-Collingwood,3385
+num_people,2011 to 2016,Renfrew-Collingwood,3475
+num_people,Non-permanent residents,Renfrew-Collingwood,2530
+num_people,Non-immigrants,Riley Park,14055
+num_people,Immigrants,Riley Park,7645
+num_people,Before 1981,Riley Park,2680
+num_people,1981 to 1990,Riley Park,1195
+num_people,1991 to 2000,Riley Park,1920
+num_people,2001 to 2010,Riley Park,1045
+num_people,2001 to 2005,Riley Park,525
+num_people,2006 to 2010,Riley Park,515
+num_people,2011 to 2016,Riley Park,800
+num_people,Non-permanent residents,Riley Park,670
+num_people,Non-immigrants,Shaughnessy,4145
+num_people,Immigrants,Shaughnessy,3535
+num_people,Before 1981,Shaughnessy,940
+num_people,1981 to 1990,Shaughnessy,400
+num_people,1991 to 2000,Shaughnessy,615
+num_people,2001 to 2010,Shaughnessy,985
+num_people,2001 to 2005,Shaughnessy,290
+num_people,2006 to 2010,Shaughnessy,700
+num_people,2011 to 2016,Shaughnessy,595
+num_people,Non-permanent residents,Shaughnessy,310
+num_people,Non-immigrants,South Cambie,4600
+num_people,Immigrants,South Cambie,2630
+num_people,Before 1981,South Cambie,895
+num_people,1981 to 1990,South Cambie,405
+num_people,1991 to 2000,South Cambie,640
+num_people,2001 to 2010,South Cambie,445
+num_people,2001 to 2005,South Cambie,155
+num_people,2006 to 2010,South Cambie,295
+num_people,2011 to 2016,South Cambie,250
+num_people,Non-permanent residents,South Cambie,340
+num_people,Non-immigrants,Strathcona,5765
+num_people,Immigrants,Strathcona,3895
+num_people,Before 1981,Strathcona,955
+num_people,1981 to 1990,Strathcona,825
+num_people,1991 to 2000,Strathcona,1080
+num_people,2001 to 2010,Strathcona,705
+num_people,2001 to 2005,Strathcona,345
+num_people,2006 to 2010,Strathcona,365
+num_people,2011 to 2016,Strathcona,330
+num_people,Non-permanent residents,Strathcona,200
+num_people,Non-immigrants,Sunset,14250
+num_people,Immigrants,Sunset,20155
+num_people,Before 1981,Sunset,4280
+num_people,1981 to 1990,Sunset,3010
+num_people,1991 to 2000,Sunset,4990
+num_people,2001 to 2010,Sunset,4665
+num_people,2001 to 2005,Sunset,2190
+num_people,2006 to 2010,Sunset,2470
+num_people,2011 to 2016,Sunset,3210
+num_people,Non-permanent residents,Sunset,1670
+num_people,Non-immigrants,Victoria-Fraserview,11410
+num_people,Immigrants,Victoria-Fraserview,18155
+num_people,Before 1981,Victoria-Fraserview,4545
+num_people,1981 to 1990,Victoria-Fraserview,3185
+num_people,1991 to 2000,Victoria-Fraserview,4895
+num_people,2001 to 2010,Victoria-Fraserview,3440
+num_people,2001 to 2005,Victoria-Fraserview,1570
+num_people,2006 to 2010,Victoria-Fraserview,1870
+num_people,2011 to 2016,Victoria-Fraserview,2085
+num_people,Non-permanent residents,Victoria-Fraserview,670
+num_people,Non-immigrants,West End,25460
+num_people,Immigrants,West End,15945
+num_people,Before 1981,West End,3675
+num_people,1981 to 1990,West End,1580
+num_people,1991 to 2000,West End,3125
+num_people,2001 to 2010,West End,3800
+num_people,2001 to 2005,West End,1610
+num_people,2006 to 2010,West End,2190
+num_people,2011 to 2016,West End,3770
+num_people,Non-permanent residents,West End,5320
+num_people,Non-immigrants,West Point Grey,7480
+num_people,Immigrants,West Point Grey,4785
+num_people,Before 1981,West Point Grey,1465
+num_people,1981 to 1990,West Point Grey,415
+num_people,1991 to 2000,West Point Grey,725
+num_people,2001 to 2010,West Point Grey,1390
+num_people,2001 to 2005,West Point Grey,540
+num_people,2006 to 2010,West Point Grey,850
+num_people,2011 to 2016,West Point Grey,785
+num_people,Non-permanent residents,West Point Grey,670
+num_people,Non-immigrants,Vancouver CSD,325175
+num_people,Immigrants,Vancouver CSD,262765
+num_people,Before 1981,Vancouver CSD,63890
+num_people,1981 to 1990,Vancouver CSD,38210
+num_people,1991 to 2000,Vancouver CSD,63480
+num_people,2001 to 2010,Vancouver CSD,59855
+num_people,2001 to 2005,Vancouver CSD,26900
+num_people,2006 to 2010,Vancouver CSD,32955
+num_people,2011 to 2016,Vancouver CSD,37335
+num_people,Non-permanent residents,Vancouver CSD,30270
+num_people,Non-immigrants,Vancouver CMA,1358990
+num_people,Immigrants,Vancouver CMA,989545
+num_people,Before 1981,Vancouver CMA,209980
+num_people,1981 to 1990,Vancouver CMA,120730
+num_people,1991 to 2000,Vancouver CMA,247830
+num_people,2001 to 2010,Vancouver CMA,268475
+num_people,2001 to 2005,Vancouver CMA,124890
+num_people,2006 to 2010,Vancouver CMA,143580
+num_people,2011 to 2016,Vancouver CMA,142535
+num_people,Non-permanent residents,Vancouver CMA,77700
