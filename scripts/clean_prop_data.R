@@ -43,3 +43,6 @@ neigh_prop_summary <- function(neigh_tax){
     #    summarise(count = n())
     return(neigh_prop)
 }
+
+#cleaned_prop = clean_prop_data()
+#prop_summary = neigh_prop_summary(cleaned_prop)
