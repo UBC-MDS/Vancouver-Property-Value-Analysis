@@ -46,3 +46,4 @@ neigh_prop_summary <- function(neigh_tax){
 
 #cleaned_prop = clean_prop_data()
 #prop_summary = neigh_prop_summary(cleaned_prop)
+#write_csv(prop_summary, here("data", "prop_neigh_summary.csv"))
