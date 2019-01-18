@@ -37,8 +37,21 @@ neigh_prop_summary <- function(neigh_tax){
                   NUM_STRATA = sum(LEGAL_TYPE == "STRATA")) %>%
         arrange(desc(MEDIAN_PROP_VALUE))
     
+    # Get property summary stats for all of Vancouver and append
+    van_stats <- data.frame( 
+            NEIGHBOURHOOD_NAME='Vancouver CMA',
+            MEDIAN_PROP_VALUE = median(neigh_tax$TOTAL_VALUE, na.rm = TRUE),
+            AVG_PROP_VALUE = mean(neigh_tax$TOTAL_VALUE, na.rm =TRUE),
+            MEDIAN_PROP_AGEYRS = median(2018-neigh_tax$YEAR_BUILT, na.rm = TRUE),
+            AVG_PROP_AGEYRS = mean(2018-neigh_tax$YEAR_BUILT, na.rm = TRUE),
+            NUM_ONE_FAMILY_DWELL = sum(neigh_tax$ZONE_CATEGORY=="One Family Dwelling"), 
+            NUM_LAND = sum(neigh_tax$LEGAL_TYPE == "LAND"),
+            NUM_STRATA = sum(neigh_tax$LEGAL_TYPE == "STRATA"))
+    
+    neigh_prop <- rbind(neigh_prop, van_stats)
+    
     # Exclude those listed as "VACANT" in street address or missing postal code? (~2600)
-    #neight_prop <- neigh_prop %>%
+    #neigh_prop <- neigh_prop %>%
     #    filter(STREET_NAME == 'VACANT' | is.na(PROPERTY_POSTAL_CODE)) %>%
     #    summarise(count = n())
     return(neigh_prop)
