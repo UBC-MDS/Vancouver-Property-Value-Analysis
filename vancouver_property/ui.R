@@ -1,6 +1,7 @@
 library(shiny)
 library(shinythemes)
 library(leaflet)
+library(shinydashboard)
 
 shinyUI(
     navbarPage(theme = shinytheme('yeti'),
@@ -13,7 +14,6 @@ shinyUI(
                                 h3(class = 'text-center', 'Here goes one dropdown'),
                                 selectInput('municipality_input', 'Municipality',
                                             c('Vancouver' = 'Vancouver CMA', 
-                                              'UBC' = 'UBC',
                                               'Arbutus-Ridge' = 'Arbutus-Ridge',
                                               'Downtown' = 'Downtown',
                                               'Dunbar-Southlands' = 'Dunbar-Southlands',
@@ -47,18 +47,25 @@ shinyUI(
                          ),
                      fluidRow(
                          column(2,
-                                h3(class = 'text-center', 'Here goes the second dropdown'),
+                                h3(class = 'text-center'),
                                 selectInput('social_input', 'Socio-Demographic Variable',
-                                            c('Age' = 'age_group', 'Household Size' = 'household_size'),
+                                            c('Age' = 'age_group', 
+                                              'Household Size' = 'household_size',
+                                              'House Type' = 'house_type',
+                                              'Immigration Status' = 'num_people'),
                                             selected = 'age_group')),
-                         column(4, h3(class = 'text-center', plotOutput("van_barplot"))),
-                         column(4, h3(class = 'text-center', plotOutput("neigh_barplot"))),
-                         column(2)
+                         column(10, h3(class = 'text-center', plotOutput("neigh_barplot")))
                      ),
                      fluidRow(
                          column(2),
-                         column(8, h3(class = 'text-center', 'Here goes the table')),
-                         column(2)
+                         column(5, h6(icon("exclamation-circle"), uiOutput("van_gap"),align = "center"),
+                                    h6(icon("home"), uiOutput("van_value"),align = "center"),
+                                    h6(icon("money-bill-wave"), uiOutput("van_income"),align = "center")),
+                         
+                         column(5,  h6(icon("exclamation-circle"), uiOutput("neigh_gap"),align = "center"),
+                                    h6(icon("home"), uiOutput("neigh_value"),align = "center"),
+                                    h6(icon("money-bill-wave"), uiOutput("neigh_income"),align = "center"))
+                         
                      )
                     )
                  ),
