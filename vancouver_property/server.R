@@ -1,10 +1,13 @@
 library(shiny)
 library(tidyverse)
 library(here)
+library(leaflet)
+library(DT)
 
 # Load in datasets
 socio <- read_csv(here("data", "socio_demographic_data.csv"))
 prop <- read_csv(here("data", "prop_neigh_summary.csv"))
+property_indv <- read_csv(here("data", "clean_individual.csv"))
 
 # Refactor ordering of neighbourhood factors so plots ordering is as desired
 socio$municipality <- socio$municipality %>% fct_relevel("Vancouver CMA", "Vancouver CSD")
@@ -43,6 +46,17 @@ shinyServer(function(input, output) {
         filter(NEIGHBOURHOOD_NAME == input$municipality_input))    
     
     
+    output$income_map <- renderLeaflet({
+        map <- readRDS('../data/income_map.RDS')
+    })
+    
+    output$property_map <- renderLeaflet({
+        map <- readRDS('../data/property_map.RDS')
+    })
+    
+    output$gap_map <- renderLeaflet({
+        map <- readRDS('../data/gap_map.RDS')
+    })
   #### Define display functions  
     
   output$distPlot <- renderPlot({
@@ -118,5 +132,19 @@ shinyServer(function(input, output) {
       gap <- paste('<b>','Affordability Gap (Avg.):$',format_num(neighbourhood_income()$value[1] - prop_filtered()$AVG_PROP_VALUE/30),'</b>')
       HTML(paste(gap, sep='<br/>'))
   })
+  
+  output$property_table <- DT::renderDT({
+      datatable(property_indv, 
+                colnames = c('Postal Code', 'Land Value', 'Improvement Value', 'Year Built', 'Taxes Payed', 'Total Value', 'Neighbourhood'),
+                filter = 'top', 
+                options = list(
+                    pageLength = 50,
+                    lengthMenu = c(5, 10, 15, 20, 25, 50, 100, 150),
+                    initComplete = JS(
+                        "function(settings, json) {",
+                        "$(this.api().table().header()).css({'background-color': '#696969', 'color': '#fff'});",
+                        "}")
+                ))
+  }, server = TRUE)
   
 })

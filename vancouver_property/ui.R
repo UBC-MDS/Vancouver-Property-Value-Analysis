@@ -1,6 +1,8 @@
 library(shiny)
 library(shinythemes)
+library(leaflet)
 library(shinydashboard)
+library(DT)
 
 shinyUI(
     navbarPage(theme = shinytheme('yeti'),
@@ -10,7 +12,6 @@ shinyUI(
                      fluidRow(
                          h1(class = 'text-center', 'Vancouver Property Analysis App'),
                          column(2, 
-                                h3(class = 'text-center', 'Here goes one dropdown'),
                                 selectInput('municipality_input', 'Municipality',
                                             c('Vancouver' = 'Vancouver CMA', 
                                               'Arbutus-Ridge' = 'Arbutus-Ridge',
@@ -36,13 +37,12 @@ shinyUI(
                                               'West Point Grey' = 'West Point Grey'
                                               ),
                                             selected = 'Downtown')),
-                         column(8, 
+                         column(10, 
                                 tabsetPanel(
-                                    tabPanel("Price"),
-                                    tabPanel("Income"),
-                                    tabPanel("Gap")
-                                )),
-                         column(2)
+                                    tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
+                                    tabPanel("Incomes", leafletOutput(height = 500, 'income_map')),
+                                    tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map'))
+                                ))
                          ),
                      fluidRow(
                          column(2,
@@ -68,6 +68,9 @@ shinyUI(
                      )
                     )
                  ),
-        tabPanel('About', icon = icon('info-circle'))
+        tabPanel('Individual Level Data', icon = icon('table'), 
+                 fluidPage(
+                     DTOutput('property_table')
+                 ))
     )
 )
