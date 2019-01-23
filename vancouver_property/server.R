@@ -31,12 +31,39 @@ format_num <- function(x){
     return(formatC(as.numeric(x), format="f", big.mark = ",", digits=0))
 }
 
+# Creates dodgeplot comparing Vancouver to a neighbourhood on SES variable
+draw_dodgeplot <- function(socio_data, input){
+    socio_data %>%
+        ggplot(aes(x=variable, y=prop, fill=municipality)) +
+        geom_bar(stat="identity", position='dodge2') +
+        scale_fill_manual(values = c("#615E59", "#80BD79")) + 
+        coord_flip() +
+        xlab(vars_name[[input$social_input]]) +
+        ylab("Proportion") +
+        ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
+        theme(plot.title = element_text(hjust = 0.5, size=15), 
+              axis.title.x=element_text(size = 15), 
+              axis.title.y=element_text(size = 15),
+              axis.text.x=element_text(size=10),
+              axis.text.y=element_text(size=10),
+              legend.position = c(0.85, 0.85)) +  
+        guides(fill=guide_legend(title="Neighbourhood"))
+}
+
+# Surround a string with quotes
+neigh_name_formatter <- function(name){
+    #return(paste("\"", name, "\"","=", "\"", name, "\""))
+    return(paste(dQuote(name), "=", dQuote(name)))
+}
+
 shinyServer(function(input, output) {
     
     # Filter SES data dynamically based on dropdown selections
     socio_filtered <- reactive(socio %>% 
-        filter(municipality == input$municipality_input | municipality == 'Vancouver CMA', 
-               variable_category == input$social_input))
+        filter(municipality == input$municipality_input | municipality == 'Vancouver CMA', variable_category == input$social_input) %>%
+        group_by(municipality) %>%
+        mutate(total = sum(value, na.rm = TRUE)) %>%
+        mutate(prop = value/total))
     
     neighbourhood_income <- reactive(socio %>% 
         filter(municipality == input$municipality_input, 
@@ -45,19 +72,18 @@ shinyServer(function(input, output) {
     prop_filtered <- reactive(prop %>% 
         filter(NEIGHBOURHOOD_NAME == input$municipality_input))    
     
-    
+    #### Define display functions
     output$income_map <- renderLeaflet({
-        map <- readRDS('../data/income_map.RDS')
+        map <- readRDS('data/income_map.RDS')
     })
     
     output$property_map <- renderLeaflet({
-        map <- readRDS('../data/property_map.RDS')
+        map <- readRDS('data/property_map.RDS')
     })
     
     output$gap_map <- renderLeaflet({
-        map <- readRDS('../data/gap_map.RDS')
+        map <- readRDS('data/gap_map.RDS')
     })
-  #### Define display functions  
     
   output$distPlot <- renderPlot({
     
@@ -69,34 +95,17 @@ shinyServer(function(input, output) {
   })
   
   # Creates Vancouver and neighbourhood-specific barplot for selected SES variable
-  output$neigh_barplot <- renderPlot({
+  output$dodgeplot <- renderPlot({
+      data <- socio_filtered()
       
       # Special filtering required for immigration status variable only
       if (input$social_input == "num_people"){
-          status_labels = c("Non-immigrants", "Immigrants", "Non-permanent residents")
           
-          socio_filtered() %>%
-              filter(variable %in% status_labels) %>%
-              ggplot(aes(x=variable, y=value)) +
-              geom_bar(stat="identity") +
-              coord_flip() +
-              facet_wrap(~municipality, ncol=2, scales = "free_x") +
-              xlab(vars_name[[input$social_input]]) +
-              ylab("Count") +
-              ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
-              theme(plot.title = element_text(hjust = 0.5))  
-
-      } else{
-          socio_filtered() %>%
-              ggplot(aes(x=variable, y=value)) +
-              geom_bar(stat="identity") +
-              coord_flip() +
-              facet_wrap(~municipality, ncol=2, scales = "free_x") +
-              xlab(vars_name[[input$social_input]]) +
-              ylab("Count") +
-              ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
-              theme(plot.title = element_text(hjust = 0.5))     
-      }
+          status_labels = c("Non-immigrants", "Immigrants", "Non-permanent residents")
+          data <- socio_filtered() %>%
+              filter(variable %in% status_labels) 
+      } 
+      draw_dodgeplot(data, input)
   })
  
   output$neigh_income <- renderUI({
@@ -129,7 +138,7 @@ shinyServer(function(input, output) {
   })
   
   output$neigh_gap <- renderUI({
-      gap <- paste('<b>','Affordability Gap (Avg.):$',format_num(neighbourhood_income()$value[1] - prop_filtered()$AVG_PROP_VALUE/30),'</b>')
+      gap <- paste('<b>','Affordability Gap (Avg.): $',format_num(neighbourhood_income()$value[1] - prop_filtered()$AVG_PROP_VALUE/30),'</b>')
       HTML(paste(gap, sep='<br/>'))
   })
   
