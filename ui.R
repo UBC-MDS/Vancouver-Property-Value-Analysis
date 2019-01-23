@@ -3,6 +3,7 @@ library(shinythemes)
 library(leaflet)
 library(shinydashboard)
 library(DT)
+library(scales)
 
 shinyUI(
     navbarPage(theme = shinytheme('yeti'),
@@ -39,9 +40,9 @@ shinyUI(
                                             selected = 'Downtown')),
                          column(10, 
                                 tabsetPanel(
+                                    tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map')),
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
-                                    tabPanel("Incomes", leafletOutput(height = 500, 'income_map')),
-                                    tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map'))
+                                    tabPanel("Incomes", leafletOutput(height = 500, 'income_map'))
                                 ))
                          ),
                      fluidRow(
