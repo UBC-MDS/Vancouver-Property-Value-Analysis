@@ -3,6 +3,7 @@ library(shinythemes)
 library(leaflet)
 library(shinydashboard)
 library(DT)
+library(scales)
 
 # Read in property CSV to get neighbourhood names for first dropdown list
 prop_data <- read_csv(here("data", "prop_neigh_summary.csv"))
@@ -16,8 +17,9 @@ shinyUI(
                  fluidPage(
                      fluidRow(
                          #h1(class = 'text-center', 'Vancouver Property Analysis App'),
-                         column(6, 
+                         column(6,
                                 tabsetPanel(
+                                    tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map')),
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
                                     tabPanel("Incomes", leafletOutput(height = 500, 'income_map')),
                                     tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map'))
@@ -30,16 +32,16 @@ shinyUI(
                                                        selected = 'Downtown')),
                                     column(6,
                                        selectInput('social_input', 'Socio-Demographic Variable',
-                                                   c('Age' = 'age_group', 
+                                                   c('Age' = 'age_group',
                                                      'Household Size' = 'household_size',
                                                      'House Type' = 'house_type',
                                                      'Immigration Status' = 'num_people'),
                                                    selected = 'age_group'))
                                     ),
-                                
+
                                 fluidRow(
                                     column(12,
-                                         h3(class = 'text-center', plotOutput("dodgeplot"))   
+                                         h3(class = 'text-center', plotOutput("dodgeplot"))
                                     )
                                 ),
                                 fluidRow(
@@ -56,7 +58,7 @@ shinyUI(
                          )
                     )
                  ),
-        tabPanel('Individual Level Data', icon = icon('table'), 
+        tabPanel('Individual Level Data', icon = icon('table'),
                  fluidPage(
                      DTOutput('property_table')
                  ))
