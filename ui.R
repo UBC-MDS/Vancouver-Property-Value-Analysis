@@ -4,6 +4,8 @@ library(leaflet)
 library(shinydashboard)
 library(DT)
 library(scales)
+library(tidyverse)
+
 
 # Read in property CSV to get neighbourhood names for first dropdown list
 prop_data <- read_csv(here("data", "prop_neigh_summary.csv"))
@@ -16,13 +18,11 @@ shinyUI(
         tabPanel('Home', icon = icon('home'),
                  fluidPage(
                      fluidRow(
-                         #h1(class = 'text-center', 'Vancouver Property Analysis App'),
                          column(6,
                                 tabsetPanel(
                                     tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map')),
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
-                                    tabPanel("Incomes", leafletOutput(height = 500, 'income_map')),
-                                    tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map'))
+                                    tabPanel("Incomes", leafletOutput(height = 500, 'income_map'))
                                 )),
                          column(6,
                                 fluidRow(

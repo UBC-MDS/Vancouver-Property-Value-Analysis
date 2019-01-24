@@ -3,7 +3,9 @@ library(tidyverse)
 library(here)
 library(leaflet)
 library(DT)
-library(scales)
+library(forcats)
+
+
 # Load in datasets
 socio <- read_csv(here("data", "socio_demographic_data.csv"))
 prop <- read_csv(here("data", "prop_neigh_summary.csv"))
@@ -31,242 +33,129 @@ format_num <- function(x){
     return(formatC(as.numeric(x), format="f", big.mark = ",", digits=0))
 }
 
+# Creates dodgeplot comparing Vancouver to a neighbourhood on SES variable
+draw_dodgeplot <- function(socio_data, input){
+    socio_data %>%
+        ggplot(aes(x=variable, y=prop, fill=municipality)) +
+        geom_bar(stat="identity", position='dodge2') +
+        scale_fill_manual(values = c("#615E59", "#80BD79")) + 
+        coord_flip() +
+        xlab(vars_name[[input$social_input]]) +
+        ylab("Proportion") +
+        ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
+        theme(plot.title = element_text(hjust = 0.5, size=15), 
+              axis.title.x=element_text(size = 15), 
+              axis.title.y=element_text(size = 15),
+              axis.text.x=element_text(size=10),
+              axis.text.y=element_text(size=10),
+              legend.position = c(0.85, 0.85)) +  
+        guides(fill=guide_legend(title="Neighbourhood"))
+}
+
+# Surround a string with quotes
+neigh_name_formatter <- function(name){
+    #return(paste("\"", name, "\"","=", "\"", name, "\""))
+    return(paste(dQuote(name), "=", dQuote(name)))
+}
+
 shinyServer(function(input, output) {
     
     # Filter SES data dynamically based on dropdown selections
     socio_filtered <- reactive(socio %>% 
-        filter(municipality == input$municipality_input | municipality == 'Vancouver CMA', 
-               variable_category == input$social_input))
+                                   filter(municipality == input$municipality_input | municipality == 'Vancouver CMA', variable_category == input$social_input) %>%
+                                   group_by(municipality) %>%
+                                   mutate(total = sum(value, na.rm = TRUE)) %>%
+                                   mutate(prop = value/total))
     
     neighbourhood_income <- reactive(socio %>% 
-        filter(municipality == input$municipality_input, 
-                variable_category == "avg_income" | variable_category == "median_income"))
+                                         filter(municipality == input$municipality_input, 
+                                                variable_category == "avg_income" | variable_category == "median_income"))
     
     prop_filtered <- reactive(prop %>% 
-        filter(NEIGHBOURHOOD_NAME == input$municipality_input))    
+                                  filter(NEIGHBOURHOOD_NAME == input$municipality_input))    
     
-    
+    #### Define display functions
     output$income_map <- renderLeaflet({
-        van_spatial_income <- readRDS('data/van_spatial_income.RDS')
-        
-        labels <- sprintf(
-            "<strong>Municipality</strong>: %s <br/> 
-            <strong>Average Income</strong>: %s <br/>
-            <strong>Median Income</strong>: %s",
-            van_spatial_income@data$Name, dollar(van_spatial_income@data$avg_income), dollar(van_spatial_income@data$median_income)
-        ) %>% lapply(htmltools::HTML)
-        
-        pal_avg <- colorBin('YlGn', domain = van_spatial_income$avg_income, bins = 5)
-        pal_median <- colorBin('YlGn', domain = van_spatial_income$median_income, bins = 5)
-        
-        leaflet(van_spatial_income) %>%
-            addProviderTiles('OpenStreetMap.BlackAndWhite') %>%
-            addPolygons(fillColor = ~pal_avg(avg_income),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Average Income') %>%
-            addLegend(pal = pal_avg, values = ~avg_income, title = 'Average Income per Person', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Average Income', position = 'topright') %>%
-            addPolygons(fillColor = ~pal_median(median_income),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Median Income') %>%
-            addLegend(pal = pal_median, values = ~median_income, title = 'Median Income per Person', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Median Income', position = 'topright') %>%
-            addLayersControl(overlayGroups = c('Average Income', 'Median Income'),
-                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
-            hideGroup('Median Income')
+        map <- readRDS('data/income_map.RDS')
     })
     
     output$property_map <- renderLeaflet({
-        
-        van_spatial_property <- readRDS('data/van_spatial_property.RDS')
-        
-        labels <- sprintf(
-            "<strong>Municipality</strong>: %s <br/> 
-            <strong>Average Value</strong>: %s <br/>
-            <strong>Median Value</strong>: %s",
-            van_spatial_property@data$Name, dollar(van_spatial_property@data$avg_price), dollar(van_spatial_property@data$median_price)
-        ) %>% lapply(htmltools::HTML)
-        
-        pal_avg <- colorBin('YlGn', domain = van_spatial_property$avg_price, bins = 5)
-        pal_median <- colorBin('YlGn', domain = van_spatial_property$median_price, bins = 5)
-        
-        leaflet(van_spatial_property) %>%
-            addProviderTiles('OpenStreetMap.BlackAndWhite') %>%
-            addPolygons(fillColor = ~pal_avg(avg_price),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Average Property Value') %>%
-            addLegend(pal = pal_avg, values = ~avg_price, title = 'Average Value per House', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Average Property Value', position = 'topright') %>%
-            addPolygons(fillColor = ~pal_median(median_price),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Median Property Value') %>%
-            addLegend(pal = pal_median, values = ~median_price, title = 'Median Value per House', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Median Property Value', position = 'topright') %>%
-            addLayersControl(overlayGroups = c('Average Property Value', 'Median Property Value'),
-                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
-            hideGroup('Median Property Value')
+        map <- readRDS('data/property_map.RDS')
     })
     
     output$gap_map <- renderLeaflet({
-        
-        van_spatial_gap <- readRDS('data/van_spatial_gap.RDS')
-        
-        pal_avg <- colorBin('PRGn', domain = van_spatial_gap$avg_gap, bins = 5)
-        pal_median <- colorBin('PRGn', domain = van_spatial_gap$median_gap, bins = 5)
-        
-        labels <- sprintf(
-            "<strong>Municipality</strong>: %s <br/> 
-            <strong>Average Gap</strong>: %s <br/>
-            <strong>Median Gap</strong>: %s",
-            van_spatial_gap@data$Name, dollar(van_spatial_gap@data$avg_gap), dollar(van_spatial_gap@data$median_gap)
-        ) %>% lapply(htmltools::HTML)
-        
-        property_map <- leaflet(van_spatial_gap) %>%
-            addProviderTiles('OpenStreetMap.BlackAndWhite') %>%
-            addPolygons(fillColor = ~pal_avg(avg_gap),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Average Gap') %>%
-            addLegend(pal = pal_avg, values = ~avg_gap, title = 'Average Gap between Income and Property Value', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Average Gap', position = 'topright') %>%
-            addPolygons(fillColor = ~pal_median(median_gap),
-                        weight = 1,
-                        opacity = 1,
-                        color = "white",
-                        dashArray = "2",
-                        fillOpacity = 0.5,
-                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
-                        label = labels,
-                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
-                        group = 'Median Gap') %>%
-            addLegend(pal = pal_median, values = ~median_gap, title = 'Median Gap between Income and Property Value', labFormat = labelFormat(prefix = '$', between = ' - $'), 
-                      group = 'Median Gap', position = 'topright') %>%
-            addLayersControl(overlayGroups = c('Average Gap', 'Median Gap'),
-                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
-            hideGroup('Median Gap')
+        map <- readRDS('data/gap_map.RDS')
     })
-  #### Define display functions  
     
-  output$distPlot <- renderPlot({
+    output$distPlot <- renderPlot({
+        
+        x    <- faithful[, 2] 
+        bins <- seq(min(x), max(x), length.out = input$bins + 1)
+        
+        hist(x, breaks = bins, col = 'darkgray', border = 'white')
+        
+    })
     
-    x    <- faithful[, 2] 
-    bins <- seq(min(x), max(x), length.out = input$bins + 1)
+    # Creates Vancouver and neighbourhood-specific barplot for selected SES variable
+    output$dodgeplot <- renderPlot({
+        data <- socio_filtered()
+        
+        # Special filtering required for immigration status variable only
+        if (input$social_input == "num_people"){
+            
+            status_labels = c("Non-immigrants", "Immigrants", "Non-permanent residents")
+            data <- socio_filtered() %>%
+                filter(variable %in% status_labels) 
+        } 
+        draw_dodgeplot(data, input)
+    })
     
-    hist(x, breaks = bins, col = 'darkgray', border = 'white')
+    output$neigh_income <- renderUI({
+        avg <- paste('Avg. Annual Income: $',format_num(neighbourhood_income()$value[1]))
+        med <- paste('Median Annual Income: $', format_num(neighbourhood_income()$value[2]))
+        HTML(paste(avg, med, sep='<br/>'))
+    })
     
-  })
-  
-  # Creates Vancouver and neighbourhood-specific barplot for selected SES variable
-  output$neigh_barplot <- renderPlot({
-      
-      # Special filtering required for immigration status variable only
-      if (input$social_input == "num_people"){
-          status_labels = c("Non-immigrants", "Immigrants", "Non-permanent residents")
-          
-          socio_filtered() %>%
-              filter(variable %in% status_labels) %>%
-              ggplot(aes(x=variable, y=value)) +
-              geom_bar(stat="identity") +
-              coord_flip() +
-              facet_wrap(~municipality, ncol=2, scales = "free_x") +
-              xlab(vars_name[[input$social_input]]) +
-              ylab("Count") +
-              ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
-              theme(plot.title = element_text(hjust = 0.5))  
-
-      } else{
-          socio_filtered() %>%
-              ggplot(aes(x=variable, y=value)) +
-              geom_bar(stat="identity") +
-              coord_flip() +
-              facet_wrap(~municipality, ncol=2, scales = "free_x") +
-              xlab(vars_name[[input$social_input]]) +
-              ylab("Count") +
-              ggtitle(paste("Distribution of", vars_name[[input$social_input]])) +
-              theme(plot.title = element_text(hjust = 0.5))     
-      }
-  })
- 
-  output$neigh_income <- renderUI({
-      avg <- paste('Avg. Annual Income: $',format_num(neighbourhood_income()$value[1]))
-      med <- paste('Median Annual Income: $', format_num(neighbourhood_income()$value[2]))
-      HTML(paste(avg, med, sep='<br/>'))
-  })
-  
-  output$neigh_value <- renderUI({
-      prop_avg <- paste('Avg. Property Value: $',format_num(prop_filtered()$AVG_PROP_VALUE))
-      prop_med <- paste('Median Property Value: $',format_num(prop_filtered()$MEDIAN_PROP_VALUE))
-      HTML(paste(prop_avg, prop_med, sep='<br/>'))
-  })
-  
-  output$van_income <- renderUI({
-      avg <- paste('Avg. Annual Income: $',format_num(vancouver_income$value[1]))
-      med <- paste('Median Annual Income: $', format_num(vancouver_income$value[2]))
-      HTML(paste(avg, med, sep='<br/>'))
-  })
-  
-  output$van_value <- renderUI({
-      prop_avg <- paste('Avg. Property Value: $',format_num(vancouver_prop$AVG_PROP_VALUE))
-      prop_med <- paste('Median Property Value: $',format_num(vancouver_prop$MEDIAN_PROP_VALUE))
-      HTML(paste(prop_avg, prop_med, sep='<br/>'))
-  })
-  
-  output$van_gap <- renderUI({
-      gap <- paste('<b>','Affordability Gap (Avg.): $',format_num(vancouver_income$value[1] - vancouver_prop$AVG_PROP_VALUE/30),'</b>')
-      HTML(paste(gap, sep='<br/>'))
-  })
-  
-  output$neigh_gap <- renderUI({
-      gap <- paste('<b>','Affordability Gap (Avg.):$',format_num(neighbourhood_income()$value[1] - prop_filtered()$AVG_PROP_VALUE/30),'</b>')
-      HTML(paste(gap, sep='<br/>'))
-  })
-  
-  output$property_table <- DT::renderDT({
-      datatable(property_indv, 
-                colnames = c('Postal Code', 'Land Value', 'Improvement Value', 'Year Built', 'Taxes Payed', 'Total Value', 'Neighbourhood'),
-                filter = 'top', 
-                options = list(
-                    pageLength = 50,
-                    lengthMenu = c(5, 10, 15, 20, 25, 50, 100, 150),
-                    initComplete = JS(
-                        "function(settings, json) {",
-                        "$(this.api().table().header()).css({'background-color': '#696969', 'color': '#fff'});",
-                        "}")
-                ))
-  }, server = TRUE)
-  
+    output$neigh_value <- renderUI({
+        prop_avg <- paste('Avg. Property Value: $',format_num(prop_filtered()$AVG_PROP_VALUE))
+        prop_med <- paste('Median Property Value: $',format_num(prop_filtered()$MEDIAN_PROP_VALUE))
+        HTML(paste(prop_avg, prop_med, sep='<br/>'))
+    })
+    
+    output$van_income <- renderUI({
+        avg <- paste('Avg. Annual Income: $',format_num(vancouver_income$value[1]))
+        med <- paste('Median Annual Income: $', format_num(vancouver_income$value[2]))
+        HTML(paste(avg, med, sep='<br/>'))
+    })
+    
+    output$van_value <- renderUI({
+        prop_avg <- paste('Avg. Property Value: $',format_num(vancouver_prop$AVG_PROP_VALUE))
+        prop_med <- paste('Median Property Value: $',format_num(vancouver_prop$MEDIAN_PROP_VALUE))
+        HTML(paste(prop_avg, prop_med, sep='<br/>'))
+    })
+    
+    output$van_gap <- renderUI({
+        gap <- paste('<b>','Affordability Gap (Avg.): $',format_num(vancouver_income$value[1] - vancouver_prop$AVG_PROP_VALUE/30),'</b>')
+        HTML(paste(gap, sep='<br/>'))
+    })
+    
+    output$neigh_gap <- renderUI({
+        gap <- paste('<b>','Affordability Gap (Avg.): $',format_num(neighbourhood_income()$value[1] - prop_filtered()$AVG_PROP_VALUE/30),'</b>')
+        HTML(paste(gap, sep='<br/>'))
+    })
+    
+    output$property_table <- DT::renderDT({
+        datatable(property_indv, 
+                  colnames = c('Postal Code', 'Land Value', 'Improvement Value', 'Year Built', 'Taxes Payed', 'Total Value', 'Neighbourhood'),
+                  filter = 'top', 
+                  options = list(
+                      pageLength = 50,
+                      lengthMenu = c(5, 10, 15, 20, 25, 50, 100, 150),
+                      initComplete = JS(
+                          "function(settings, json) {",
+                          "$(this.api().table().header()).css({'background-color': '#696969', 'color': '#fff'});",
+                          "}")
+                  ))
+    }, server = TRUE)
+    
 })
