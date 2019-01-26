@@ -76,16 +76,136 @@ shinyServer(function(input, output) {
     
     #### Define display functions
     output$income_map <- renderLeaflet({
-        map <- readRDS('data/income_map.RDS')
-    })
+        van_spatial_income <- readRDS('data/van_spatial_income.RDS')
+        
+        labels <- sprintf(
+            "<strong>Municipality</strong>: %s <br/> 
+            <strong>Average Income</strong>: %s <br/>
+            <strong>Median Income</strong>: %s",
+            van_spatial_income@data$Name, dollar(van_spatial_income@data$avg_income), dollar(van_spatial_income@data$median_income)
+        ) %>% lapply(htmltools::HTML)
+        
+        pal_avg <- colorBin('YlGn', domain = van_spatial_income$avg_income, bins = 5)
+        pal_median <- colorBin('YlGn', domain = van_spatial_income$median_income, bins = 5)
+        
+        leaflet(van_spatial_income) %>%
+            addProviderTiles('Stamen.TonerLite') %>%
+            addPolygons(fillColor = ~pal_avg(avg_income),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Average Income') %>%
+            addLegend(pal = pal_avg, values = ~avg_income, title = 'Average Income per Person', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Average Income', position = 'topright') %>%
+            addPolygons(fillColor = ~pal_median(median_income),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Median Income') %>%
+            addLegend(pal = pal_median, values = ~median_income, title = 'Median Income per Person', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Median Income', position = 'topright') %>%
+            addLayersControl(overlayGroups = c('Average Income', 'Median Income'),
+                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
+            hideGroup('Median Income')    
+        })
     
     output$property_map <- renderLeaflet({
-        map <- readRDS('data/property_map.RDS')
-    })
+        van_spatial_property <- readRDS('data/van_spatial_property.RDS')
+        
+        labels <- sprintf(
+            "<strong>Municipality</strong>: %s <br/> 
+            <strong>Average Value</strong>: %s <br/>
+            <strong>Median Value</strong>: %s",
+            van_spatial_property@data$Name, dollar(van_spatial_property@data$avg_price), dollar(van_spatial_property@data$median_price)
+        ) %>% lapply(htmltools::HTML)
+        
+        pal_avg <- colorBin('YlGn', domain = van_spatial_property$avg_price, bins = 5)
+        pal_median <- colorBin('YlGn', domain = van_spatial_property$median_price, bins = 5)
+        
+        leaflet(van_spatial_property) %>%
+            addProviderTiles('Stamen.TonerLite') %>%
+            addPolygons(fillColor = ~pal_avg(avg_price),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Average Property Value') %>%
+            addLegend(pal = pal_avg, values = ~avg_price, title = 'Average Value per House', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Average Property Value', position = 'topright') %>%
+            addPolygons(fillColor = ~pal_median(median_price),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Median Property Value') %>%
+            addLegend(pal = pal_median, values = ~median_price, title = 'Median Value per House', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Median Property Value', position = 'topright') %>%
+            addLayersControl(overlayGroups = c('Average Property Value', 'Median Property Value'),
+                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
+            hideGroup('Median Property Value')    
+        })
     
     output$gap_map <- renderLeaflet({
-        map <- readRDS('data/gap_map.RDS')
-    })
+        van_spatial_gap <- readRDS('data/van_spatial_gap.RDS')
+        
+        pal_avg <- colorBin('PRGn', domain = van_spatial_gap$avg_gap, bins = 5)
+        pal_median <- colorBin('PRGn', domain = van_spatial_gap$median_gap, bins = 5)
+        
+        labels <- sprintf(
+            "<strong>Municipality</strong>: %s <br/> 
+            <strong>Average Gap</strong>: %s <br/>
+            <strong>Median Gap</strong>: %s",
+            van_spatial_gap@data$Name, dollar(van_spatial_gap@data$avg_gap), dollar(van_spatial_gap@data$median_gap)
+        ) %>% lapply(htmltools::HTML)
+        
+        property_map <- leaflet(van_spatial_gap) %>%
+            addProviderTiles('Stamen.TonerLite') %>%
+            addPolygons(fillColor = ~pal_avg(avg_gap),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Average Gap') %>%
+            addLegend(pal = pal_avg, values = ~avg_gap, title = 'Average Gap between Income and Property Value', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Average Gap', position = 'topright') %>%
+            addPolygons(fillColor = ~pal_median(median_gap),
+                        weight = 1,
+                        opacity = 1,
+                        color = "white",
+                        dashArray = "2",
+                        fillOpacity = 0.5,
+                        highlight = highlightOptions(weight = 5, color = "#666", dashArray = "1", fillOpacity = 0.7, bringToFront = TRUE),
+                        label = labels,
+                        labelOptions = labelOptions(style = list("font-weight" = "normal", padding = "3px 8px"), textsize = "15px", direction = "auto"), 
+                        group = 'Median Gap') %>%
+            addLegend(pal = pal_median, values = ~median_gap, title = 'Median Gap between Income and Property Value', labFormat = labelFormat(prefix = '$', between = ' - $'), 
+                      group = 'Median Gap', position = 'topright') %>%
+            addLayersControl(overlayGroups = c('Average Gap', 'Median Gap'),
+                             options = layersControlOptions(collapsed = FALSE, ), position = 'topright') %>%
+            hideGroup('Median Gap')
+        })
     
     output$distPlot <- renderPlot({
         
