@@ -23,7 +23,7 @@ Although one of our other reviewers noted that she preferred having 2 separate b
 Behind the scenes, we also improved our code by better encapsulating repeated code into functions. The code to show the neighbourhoods dropdown selection now reads the neighbourhood names directly from a CSV data file, so is less error-prone to potential hardcoded typos.
 
 ## Other Feedback
-We also received some feedback to include data for the UBC area to the map and plot. Upon further research, we realized UBC is missing from our data sets because the UBC area west of West Point Grey and Dunbar-Southlands is not considered part of the Vancouver xxx, according to the Census. Therefore, we decided to leave the app unchanged with regards to this suggestion.
+We also received some feedback to include data for the UBC area to the map and plot. Upon further research, we realized UBC is missing from our data sets because the Census does not consider the UBC area west of West Point Grey and Dunbar-Southlands as a "local area" of the City of Vancouver. The [City of Vancouver's website](https://vancouver.ca/news-calendar/areas-of-the-city.aspx) also does not consider UBC as a neighbourhood. Therefore, we decided to leave the app unchanged with regards to this suggestion.
 
 ## General Thoughts
 Overall, the feedback we received helped to immensely improve our application, especially with regards to the layout and how we show information in the bar plot. Looking at the app now, the flow and layout makes a lot more sense and feels easier to both understand and use.
