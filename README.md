@@ -12,4 +12,4 @@ With home prices in Vancouver at record highs over recent years, many are concer
 
 ## App Design
 
-![](mockup.png)
+![](imgs/mockup.png)
