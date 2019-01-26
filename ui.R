@@ -24,7 +24,12 @@ shinyUI(
                                     tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map')),
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
                                     tabPanel("Incomes", leafletOutput(height = 500, 'income_map'))
-                                )),
+                                ),
+                                br(),
+                                h4(class = 'text-center', 'Affordability Gap'),
+                                p(class = 'text-center', 'Affordability Gap is defined as the gap that exists between the monthly income of an individual and their monthly payment of the houses. 
+                                  The monthly payment is approximated by dividing the value of the house in 30 years and then dividing that value by 12 months.')
+                         ),
                          column(6,
                                 fluidRow(
                                     column(6,
