@@ -1,6 +1,8 @@
 # Vancouver Property Analysis Application: Milestone 3 Reflection
 
-## Main Themes
+## Reflection on the usefulness of the feedback you received.
+
+### Main Themes
 The feedback we received from our reviewers can be grouped into several themes:
 
 1) Improve general layout by positioning relevant panels or sections closer together.
@@ -14,16 +16,24 @@ The feedback we received from our reviewers can be grouped into several themes:
 
 > We increased the size of the title, and x and y axes labels in the bar plot so that users can easily see which variables are being visualized.
 
-## Plotting Changes
+### Plotting Changes
 One piece of feedback we received that was very helpful but did not fall into the above themes was to show a dodge bar plot instead of two separate bar plots for Vancouver and the selected neighbourhood.
 
 Although one of our other reviewers noted that she preferred having 2 separate bar plots placed side-by-side, we plotted the dodge bar plot to explore this option and we found that the dodge bar facilitates comparisons much more easily and was what we implemented in our updated application.
 
-## Backend Changes
+### Backend Changes
 Behind the scenes, we also improved our code by better encapsulating repeated code into functions. The code to show the neighbourhoods dropdown selection now reads the neighbourhood names directly from a CSV data file, so is less error-prone to potential hardcoded typos.
 
-## Other Feedback
+### Other Feedback
 We also received some feedback to include data for the UBC area to the map and plot. Upon further research, we realized UBC is missing from our data sets because the Census does not consider the UBC area west of West Point Grey and Dunbar-Southlands as a "local area" of the City of Vancouver. The [City of Vancouver's website](https://vancouver.ca/news-calendar/areas-of-the-city.aspx) also does not consider UBC as a neighbourhood. Therefore, we decided to leave the app unchanged with regards to this suggestion.
 
-## General Thoughts
+### General Thoughts
 Overall, the feedback we received helped to immensely improve our application, especially with regards to the layout and how we show information in the bar plot. Looking at the app now, the flow and layout makes a lot more sense and feels easier to both understand and use.
+
+## Reflection on how your project has changed since Milestone 2, and why.
+
+### Implementation Difficulties
+Part of the feedback that we received was about the options of the Leaflet maps so that if you select the median of a variable it doesn't display the average layer and vice-versa. This was possible to implement, however the legends of each layer didn't dissapeared with the layer so two legends remained. I looked into using JavaScript for this but apparently it's not possible to do if you have legends, such as in our case. 
+
+### Objective Change and Design Choice
+Our objective changed this time instead of maximizing usability, we wanted to maximize use of space and accesibility to users. This lead us to rescaling the size of the plots, including text descriptions for terms that weren't 100% clear and adjusted the position of the plots. For the barcharts we moved from using two barcharts to using a single dodge barchart.
