@@ -1,10 +1,17 @@
 # Vancouver Property Value Analysis
+> App deployed at: https://ian-flores.shinyapps.io/vancouver_tax/
 
 ## Authors
 
 | Carrie Cheung | Ian Flores Siaca |
 | ------------- | ---------------- |
 | [@carrieklc](https://github.com/carrieklc) | [@ian-flores](https://github.com/ian-flores) |
+
+## Write-Ups
+
+- [Milestone 3](docs/milestone3_writeup.md)
+- [Application Writeup](docs/app_writeup.md)
+- [Proposal](docs/proposal.md)
 
 ## Overview
 
