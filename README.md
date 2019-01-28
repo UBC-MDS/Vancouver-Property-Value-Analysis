@@ -1,5 +1,6 @@
 # Vancouver Property Value Analysis
 > App deployed at: https://ian-flores.shinyapps.io/vancouver_tax/
+> App deployed as well at:
 
 ## Authors
 
