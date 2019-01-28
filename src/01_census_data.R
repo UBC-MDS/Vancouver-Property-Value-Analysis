@@ -1,5 +1,15 @@
+########################## Initial Note #######################################
+# Author: @ian-flores
+# Date: January, 2019
+# Name: 01_census_data.R
+# Description: This R script cleans the census data available
+#              for the City of Vancouver.
+###############################################################################
+
+# Loads the necessary library
 library(tidyverse)
 
+# Reads in the data
 age_groups <- read_csv('data/census_vancouver_2016.csv', skip = 4, n_max = 26)
 
 age_groups <- age_groups %>%
@@ -21,6 +31,7 @@ household_data <- read_csv('data/census_vancouver_2016.csv', skip = 135) %>%
 colnames(household_data)[1:2] <- c('ID', 'Variable')
 colnames(household_data)[3:26] <- new_colnames
 
+# Function to extract specific variables from the dataset
 household_data_parser <- function(.data, first_id, second_id){
     
     ID <- quo('ID')

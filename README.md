@@ -1,6 +1,5 @@
 # Vancouver Property Value Analysis
 > App deployed at: https://ian-flores.shinyapps.io/vancouver_tax/
-> App deployed as well at:
 
 ## Authors
 
@@ -10,6 +9,7 @@
 
 ## Write-Ups
 
+- [Milestone 4]()
 - [Milestone 3](docs/milestone3_writeup.md)
 - [Application Writeup](docs/app_writeup.md)
 - [Proposal](docs/proposal.md)

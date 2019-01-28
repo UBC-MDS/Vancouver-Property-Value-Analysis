@@ -1,6 +1,15 @@
+########################## Initial Note #########################################
+# Author: @carieklc
+# Date: January, 2019
+# Name: 02_property_data.R
+# Description: This R script calculates the summary statistics per neighbourhood.
+#################################################################################
+
+# Load necessary libraries
 library(tidyverse)
 library(here)
 
+# Function to automatically clean the individual property data
 clean_prop_data <- function(){
     # Load in datasets
     ptax <- read_csv(here("data", "property_tax_report.csv"))
@@ -24,6 +33,7 @@ clean_prop_data <- function(){
     return(neigh_tax)
 }
 
+# Function to produce summaries per neighbourhood
 neigh_prop_summary <- function(neigh_tax){
     # Get property summary stats for each neighbourhood
     neigh_prop <- neigh_tax %>% 
@@ -49,14 +59,11 @@ neigh_prop_summary <- function(neigh_tax){
             NUM_STRATA = sum(neigh_tax$LEGAL_TYPE == "STRATA"))
     
     neigh_prop <- rbind(neigh_prop, van_stats)
-    
-    # Exclude those listed as "VACANT" in street address or missing postal code? (~2600)
-    #neigh_prop <- neigh_prop %>%
-    #    filter(STREET_NAME == 'VACANT' | is.na(PROPERTY_POSTAL_CODE)) %>%
-    #    summarise(count = n())
+
     return(neigh_prop)
 }
 
-#cleaned_prop = clean_prop_data()
-#prop_summary = neigh_prop_summary(cleaned_prop)
-#write_csv(prop_summary, here("data", "prop_neigh_summary.csv"))
+# Executes the previous two functions and saves the neighbourhood information
+cleaned_prop = clean_prop_data()
+prop_summary = neigh_prop_summary(cleaned_prop)
+write_csv(prop_summary, here("data", "prop_neigh_summary.csv"))
