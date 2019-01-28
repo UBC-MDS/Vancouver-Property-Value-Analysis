@@ -1,9 +1,18 @@
+########################## Initial Note #######################################
+# Author: @ian-flores & @carieklc
+# Date: January, 2019
+# Name: server.R
+# Description: This R script serves the server for the shiny application. 
+###############################################################################'
+
+# Loads packages
 library(shiny)
-library(tidyverse)
-library(here)
 library(leaflet)
 library(DT)
+
+library(tidyverse)
 library(forcats)
+library(here)
 
 
 # Load in datasets
@@ -54,10 +63,10 @@ draw_dodgeplot <- function(socio_data, input){
 
 # Surround a string with quotes
 neigh_name_formatter <- function(name){
-    #return(paste("\"", name, "\"","=", "\"", name, "\""))
     return(paste(dQuote(name), "=", dQuote(name)))
 }
 
+#### Server Definition ####
 shinyServer(function(input, output) {
     
     # Filter SES data dynamically based on dropdown selections
@@ -74,10 +83,13 @@ shinyServer(function(input, output) {
     prop_filtered <- reactive(prop %>% 
                                   filter(NEIGHBOURHOOD_NAME == input$municipality_input))    
     
-    #### Define display functions
+    #### Income Map ####
     output$income_map <- renderLeaflet({
-        van_spatial_income <- readRDS('data/van_spatial_income.RDS')
         
+        # Reads in data
+        van_spatial_income <- readRDS(here('data', 'van_spatial_income.RDS'))
+        
+        # Creates labels for the hovering in the plot
         labels <- sprintf(
             "<strong>Municipality</strong>: %s <br/> 
             <strong>Average Income</strong>: %s <br/>
@@ -85,9 +97,11 @@ shinyServer(function(input, output) {
             van_spatial_income@data$Name, dollar(van_spatial_income@data$avg_income), dollar(van_spatial_income@data$median_income)
         ) %>% lapply(htmltools::HTML)
         
+        # Creates functions to colour the variable
         pal_avg <- colorBin('YlGn', domain = van_spatial_income$avg_income, bins = 5)
         pal_median <- colorBin('YlGn', domain = van_spatial_income$median_income, bins = 5)
         
+        # Creates interactive map
         leaflet(van_spatial_income) %>%
             addProviderTiles('Stamen.TonerLite') %>%
             addPolygons(fillColor = ~pal_avg(avg_income),
@@ -119,9 +133,12 @@ shinyServer(function(input, output) {
             hideGroup('Median Income')    
         })
     
+    #### Property Map #### 
     output$property_map <- renderLeaflet({
-        van_spatial_property <- readRDS('data/van_spatial_property.RDS')
-        
+        # Reads in data
+        van_spatial_property <- readRDS(here('data', 'van_spatial_property.RDS'))
+
+        # Creates labels for the hovering in the plot
         labels <- sprintf(
             "<strong>Municipality</strong>: %s <br/> 
             <strong>Average Value</strong>: %s <br/>
@@ -129,9 +146,11 @@ shinyServer(function(input, output) {
             van_spatial_property@data$Name, dollar(van_spatial_property@data$avg_price), dollar(van_spatial_property@data$median_price)
         ) %>% lapply(htmltools::HTML)
         
+        # Creates functions to colour the variable
         pal_avg <- colorBin('YlGn', domain = van_spatial_property$avg_price, bins = 5)
         pal_median <- colorBin('YlGn', domain = van_spatial_property$median_price, bins = 5)
         
+        # Creates interactive map
         leaflet(van_spatial_property) %>%
             addProviderTiles('Stamen.TonerLite') %>%
             addPolygons(fillColor = ~pal_avg(avg_price),
@@ -163,12 +182,17 @@ shinyServer(function(input, output) {
             hideGroup('Median Property Value')    
         })
     
+    #### Gap Map #### 
     output$gap_map <- renderLeaflet({
-        van_spatial_gap <- readRDS('data/van_spatial_gap.RDS')
         
+        # Reads in data
+        van_spatial_gap <- readRDS(here('data', 'van_spatial_gap.RDS'))
+
+        # Creates functions to colour the variable
         pal_avg <- colorBin('PRGn', domain = van_spatial_gap$avg_gap, bins = 5)
         pal_median <- colorBin('PRGn', domain = van_spatial_gap$median_gap, bins = 5)
         
+        # Creates labels for the hovering in the plot
         labels <- sprintf(
             "<strong>Municipality</strong>: %s <br/> 
             <strong>Average Gap</strong>: %s <br/>
@@ -176,6 +200,7 @@ shinyServer(function(input, output) {
             van_spatial_gap@data$Name, dollar(van_spatial_gap@data$avg_gap), dollar(van_spatial_gap@data$median_gap)
         ) %>% lapply(htmltools::HTML)
         
+        # Creates interactive map
         property_map <- leaflet(van_spatial_gap) %>%
             addProviderTiles('Stamen.TonerLite') %>%
             addPolygons(fillColor = ~pal_avg(avg_gap),
@@ -207,15 +232,7 @@ shinyServer(function(input, output) {
             hideGroup('Median Gap')
         })
     
-    output$distPlot <- renderPlot({
-        
-        x    <- faithful[, 2] 
-        bins <- seq(min(x), max(x), length.out = input$bins + 1)
-        
-        hist(x, breaks = bins, col = 'darkgray', border = 'white')
-        
-    })
-    
+    #### Dodgeplot ####
     # Creates Vancouver and neighbourhood-specific barplot for selected SES variable
     output$dodgeplot <- renderPlot({
         data <- socio_filtered()
@@ -230,6 +247,7 @@ shinyServer(function(input, output) {
         draw_dodgeplot(data, input)
     })
     
+    #### Summary variables about Neighbourhood ####
     output$neigh_income <- renderUI({
         avg <- paste('Avg. Annual Income: $',format_num(neighbourhood_income()$value[1]))
         med <- paste('Median Annual Income: $', format_num(neighbourhood_income()$value[2]))
@@ -264,6 +282,7 @@ shinyServer(function(input, output) {
         HTML(paste(gap, sep='<br/>'))
     })
     
+    #### DataTable ####
     output$property_table <- DT::renderDT({
         datatable(property_indv, 
                   colnames = c('Postal Code', 'Land Value', 'Improvement Value', 'Year Built', 'Taxes Payed', 'Total Value', 'Neighbourhood'),

@@ -1,9 +1,15 @@
+########################## Initial Note #######################################
+# Author: @ian-flores & @carieklc
+# Date: January, 2019
+# Name: ui.R
+# Description: This R script serves as the UI for the shiny application. 
+###############################################################################
+
 library(shiny)
 library(shinythemes)
 library(leaflet)
-library(shinydashboard)
 library(DT)
-library(scales)
+
 library(tidyverse)
 library(here)
 
@@ -20,22 +26,27 @@ shinyUI(
                  fluidPage(
                      fluidRow(
                          column(6,
+                                #### Maps ####
                                 tabsetPanel(
                                     tabPanel("Affordability Gap", leafletOutput(height = 500, 'gap_map')),
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
                                     tabPanel("Incomes", leafletOutput(height = 500, 'income_map'))
                                 ),
                                 br(),
+                                #### Afforability Gap Definition ####
                                 h4(class = 'text-center', 'Affordability Gap'),
                                 p(class = 'text-center', 'Affordability Gap is defined as the gap that exists between the monthly income of an individual and their monthly payment of the houses. 
                                   The monthly payment is approximated by dividing the value of the house in 30 years and then dividing that value by 12 months.')
                          ),
                          column(6,
                                 fluidRow(
+                                    #### Neighbourhood Dropdown ####
                                     column(6,
                                            selectInput('municipality_input', 'Neighbourhood',
                                                        choices = neigh_list,
                                                        selected = 'Downtown')),
+                                    
+                                    #### Social Variable Dropdown ####
                                     column(6,
                                        selectInput('social_input', 'Socio-Demographic Variable',
                                                    c('Age' = 'age_group',
@@ -47,10 +58,12 @@ shinyUI(
 
                                 fluidRow(
                                     column(12,
+                                         #### Dodgeplot ####
                                          h3(class = 'text-center', plotOutput("dodgeplot"))
                                     )
                                 ),
                                 fluidRow(
+                                    #### Summary Statistics Icons ####
                                     column(6,
                                            h6(icon("exclamation-circle"), uiOutput("van_gap"),align = "center"),
                                            h6(icon("home"), uiOutput("van_value"),align = "center"),
@@ -66,6 +79,7 @@ shinyUI(
                  ),
         tabPanel('Individual Level Data', icon = icon('table'),
                  fluidPage(
+                     #### DataTable ####
                      DTOutput('property_table')
                  ))
     )
