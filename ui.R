@@ -1,5 +1,5 @@
 ########################## Initial Note #######################################
-# Author: @ian-flores & @carieklc
+# Author: @ian-flores & @carrieklc
 # Date: January, 2019
 # Name: ui.R
 # Description: This R script serves as the UI for the shiny application. 

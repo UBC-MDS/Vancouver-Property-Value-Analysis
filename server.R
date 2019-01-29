@@ -9,7 +9,7 @@
 library(shiny)
 library(leaflet)
 library(DT)
-
+library(scales)
 library(tidyverse)
 library(forcats)
 library(here)
