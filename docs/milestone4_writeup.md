@@ -9,4 +9,4 @@ In addition, we had received feedback in milestone 2 to provide definitions for 
 Lastly, we wanted to showcase this application as part of our data science portfolios/resumes, but the app was originally deployed under only one of our names (Ian's) as part of the shiny app's URL. As part of this milestone, the app is now also deployed by Carrie under a more general name, so that we can now both link to the application under more customized URLs of our own preferences. The application can now be accessed at both links below:
 
 * [Ian's Deployment](https://ian-flores.shinyapps.io/vancouver_tax/)
-* [Carrie's Deployment](https://data-vizzy.shinyapps.io/vancouver_tax/)
+* [Carrie's Deployment](https://carrieklc.shinyapps.io/vancouver_tax/)
