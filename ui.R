@@ -32,9 +32,8 @@ shinyUI(
                                     tabPanel("Property Values", leafletOutput(height = 500, 'property_map')),
                                     tabPanel("Incomes", leafletOutput(height = 500, 'income_map'))
                                 ),
-                                br(),
                                 #### Afforability Gap Definition ####
-                                h4(class = 'text-center', 'Affordability Gap'),
+                                h5(class = 'text-center', 'Affordability Gap'),
                                 p(class = 'text-center', 'Affordability Gap is defined as the gap that exists between the monthly income of an individual and their monthly payment of the houses. 
                                   The monthly payment is approximated by dividing the value of the house in 30 years and then dividing that value by 12 months.')
                          ),
@@ -81,6 +80,44 @@ shinyUI(
                  fluidPage(
                      #### DataTable ####
                      DTOutput('property_table')
+                 )),
+        tabPanel('About', icon = icon('info'),
+                 fluidPage(
+                     fluidRow(
+                         column(4),
+                         column(4,
+                                h2(class = 'text-center', 'Overview'),
+                                h5(class = 'text-center', 
+                                  'With home prices in Vancouver at record 
+                                  highs over recent years, many are concerned 
+                                  about housing affordability, especially the 
+                                  gap between property values and the income 
+                                  of people currently living in Vancouver. 
+                                  If we can compare property values of homes 
+                                  in different neighbourhoods of Vancouver 
+                                  and the socio-economic background of people 
+                                  who reside in those areas, we can identify 
+                                  neighbourhoods where the affordability gap 
+                                  is particularly severe. To do this, we built
+                                  this application that allows users to visually
+                                  explore property values and socio-economic data
+                                  geographically mapped to Vancouver neighbourhoods.'),
+                                br(),
+                                h2(class = 'text-center', 'Our Data'),
+                                h5(class = 'text-center',
+                                  'To build this application we used two datasets 
+                                  provided by the City of Vancouver in their Open
+                                  Data Catalogue. The first of these datasets is 
+                                  the Property Tax Report Data for the year 2018. 
+                                  Based on this data, we created the visualizations 
+                                  about property value. the second datasets is the 
+                                  Census Local Area Profile for 2016, which includes 
+                                  socio-economic data for each neighbourhood.'),
+                                img(src = 'vancouver_downtown.jpg', align = 'middle', height = 400),
+                                p('Downtown Vancouver')
+                                ),
+                         column(4)
+                     )
                  ))
     )
 )
