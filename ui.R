@@ -114,6 +114,7 @@ shinyUI(
                                   Census Local Area Profile for 2016, which includes 
                                   socio-economic data for each neighbourhood.'),
                                 img(src = 'vancouver_downtown.jpg', align = 'middle', height = 400),
+                                # Picture taken from flickr
                                 p('Downtown Vancouver')
                                 ),
                          column(4)
